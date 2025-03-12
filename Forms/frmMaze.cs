@@ -201,7 +201,7 @@ public partial class frmMaze : ModuleForm
             return;
         }
 
-        //if there is a marker is found in any of these places, they're invalid
+        //if there is a marker found in any of these places, they're invalid
 
 
         //(1,3) (1,6) (2,2) (2,4) (2,6) (3,1) (3,2) (3,3) (3,4) (4,5) (5,2) (5,4) (5,5) (5,6) (6,1) (6,3) (6,5) (6,6)
@@ -229,50 +229,6 @@ public partial class frmMaze : ModuleForm
             Utils.throwError("There is an invalid marker inputted on the maze");
             return;
         }
-
-        //if there are 2 markers, make sure they're valid pairs
-
-        if (markersFound == 2)
-            //(2,1) (3,6)
-            //(2,5) (4,2)
-            //(4,4) (4,6)
-            //(1,1) (4,1)
-            //(3,5) (6,4)
-            //(1,5) (5,3)
-            //(1,4) (4,3)
-            //(1,2) (6,2)
-            //(2,3) (5,1)
-            if (
-                (row2Button1.BackColor == Color.Green && row3Button6.BackColor != Color.Green)
-                || (
-                    row2Button5.BackColor == Color.Green && row4Button2.BackColor != Color.Green
-                )
-                || (
-                    row4Button4.BackColor == Color.Green && row4Button6.BackColor != Color.Green
-                )
-                || (
-                    row1Button1.BackColor == Color.Green && row4Button1.BackColor != Color.Green
-                )
-                || (
-                    row3Button5.BackColor == Color.Green && row6Button4.BackColor != Color.Green
-                )
-                || (
-                    row1Button5.BackColor == Color.Green && row5Button3.BackColor != Color.Green
-                )
-                || (
-                    row1Button4.BackColor == Color.Green && row4Button3.BackColor != Color.Green
-                )
-                || (
-                    row1Button2.BackColor == Color.Green && row6Button2.BackColor != Color.Green
-                )
-                || (
-                    row2Button3.BackColor == Color.Green && row5Button1.BackColor != Color.Green
-                )
-            )
-            {
-                Utils.throwError("There is an invalid pair of markers");
-                return;
-            }
 
         //finding the goal, player, and marker
         for (var row = 0; row < 6; row++)
