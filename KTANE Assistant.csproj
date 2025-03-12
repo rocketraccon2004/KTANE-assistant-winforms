@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{92E35B76-D295-46B7-B445-BA7531F1E42E}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>KTANE_Assistant</RootNamespace>
+        <AssemblyName>KTANE_Assistant</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+        <LangVersion>13</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Drawing"/>
+        <Reference Include="System.Windows.Forms"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Assistant.cs"/>
+        <Compile Include="Bomb.cs"/>
+        <Compile Include="Forms\frm3dMaze.cs"/>
+        <Compile Include="Forms\frm3dMaze.Designer.cs"/>
+        <Compile Include="Forms\frm3dMazeStage2.cs"/>
+        <Compile Include="Forms\frm3dMazeStage2.Designer.cs"/>
+        <Compile Include="Forms\frmAdjacentLetters.cs"/>
+        <Compile Include="Forms\frmAdjacentLetters.Designer.cs"/>
+        <Compile Include="Forms\frmAdventureGame.cs"/>
+        <Compile Include="Forms\frmAdventureGame.Designer.cs"/>
+        <Compile Include="Forms\frmAlphabet.cs"/>
+        <Compile Include="Forms\frmAlphabet.Designer.cs"/>
+        <Compile Include="Forms\frmAnagrams.cs"/>
+        <Compile Include="Forms\frmAnagrams.Designer.cs"/>
+        <Compile Include="Forms\frmBlindAlley.cs"/>
+        <Compile Include="Forms\frmBlindAlley.Designer.cs"/>
+        <Compile Include="Forms\frmButton.cs"/>
+        <Compile Include="Forms\frmButton.Designer.cs"/>
+        <Compile Include="Forms\frmColourFlash.cs"/>
+        <Compile Include="Forms\frmColourFlash.Designer.cs"/>
+        <Compile Include="Forms\frmComplicatedWires.cs"/>
+        <Compile Include="Forms\frmComplicatedWires.Designer.cs"/>
+        <Compile Include="Forms\frmEdgeworkInput.cs"/>
+        <Compile Include="Forms\frmEdgeworkInput.Designer.cs"/>
+        <Compile Include="Forms\frmEdgeworkMode.cs"/>
+        <Compile Include="Forms\frmEdgeworkMode.Designer.cs"/>
+        <Compile Include="Forms\frmFollowTheLeader.cs"/>
+        <Compile Include="Forms\frmFollowTheLeader.Designer.cs"/>
+        <Compile Include="Forms\frmKeypads.cs"/>
+        <Compile Include="Forms\frmKeypads.Designer.cs"/>
+        <Compile Include="Forms\frmKnob.cs"/>
+        <Compile Include="Forms\frmKnob.Designer.cs"/>
+        <Compile Include="Forms\frmLEDEncryption.cs"/>
+        <Compile Include="Forms\frmLEDEncryption.Designer.cs"/>
+        <Compile Include="Forms\frmMain.cs"/>
+        <Compile Include="Forms\frmMain.Designer.cs"/>
+        <Compile Include="Forms\frmMaze.cs"/>
+        <Compile Include="Forms\frmMaze.Designer.cs"/>
+        <Compile Include="Forms\frmMazeAnswer.cs"/>
+        <Compile Include="Forms\frmMazeAnswer.Designer.cs"/>
+        <Compile Include="Forms\frmMemory.cs"/>
+        <Compile Include="Forms\frmMemory.Designer.cs"/>
+        <Compile Include="Forms\frmPassword.cs"/>
+        <Compile Include="Forms\frmPassword.Designer.cs"/>
+        <Compile Include="Forms\frmPlates.cs"/>
+        <Compile Include="Forms\frmPlates.Designer.cs"/>
+        <Compile Include="Forms\frmSimon.cs"/>
+        <Compile Include="Forms\frmSimon.Designer.cs"/>
+        <Compile Include="Forms\frmSkewedSlots.cs"/>
+        <Compile Include="Forms\frmSkewedSlots.Designer.cs"/>
+        <Compile Include="Forms\frmWhosOnFirst.cs"/>
+        <Compile Include="Forms\frmWhosOnFirst.Designer.cs"/>
+        <Compile Include="Forms\frmWires.cs"/>
+        <Compile Include="Forms\frmWires.Designer.cs"/>
+        <Compile Include="Forms\frmWireSequences.cs"/>
+        <Compile Include="Forms\frmWireSequences.Designer.cs"/>
+        <Compile Include="Forms\ModuleForm.cs"/>
+        <Compile Include="Forms\ModuleForm.Designer.cs"/>
+        <Compile Include="GlobalUsing.cs"/>
+        <Compile Include="Indicator.cs"/>
+        <Compile Include="Modules\3DMaze.cs"/>
+        <Compile Include="Modules\AdjacentLetters.cs"/>
+        <Compile Include="Modules\AdventureGame.cs"/>
+        <Compile Include="Modules\Alphabet.cs"/>
+        <Compile Include="Modules\blindAlley.cs"/>
+        <Compile Include="Modules\Button.cs"/>
+        <Compile Include="Modules\ColourFlash.cs"/>
+        <Compile Include="Modules\ComplicatedWires.cs"/>
+        <Compile Include="Modules\followTheLeader.cs"/>
+        <Compile Include="Modules\Keypads.cs"/>
+        <Compile Include="Modules\Knob.cs"/>
+        <Compile Include="Modules\LEDEncryption.cs"/>
+        <Compile Include="Modules\Maze.cs"/>
+        <Compile Include="Modules\Memory.cs"/>
+        <Compile Include="Modules\Module.cs"/>
+        <Compile Include="Modules\Password.cs"/>
+        <Compile Include="Modules\SkewedSlots.cs"/>
+        <Compile Include="Modules\Wires.cs"/>
+        <Compile Include="Modules\WireSequences.cs"/>
+        <Compile Include="Plate.cs"/>
+        <Compile Include="Program.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Utils.cs"/>
+        <EmbeddedResource Include="Forms\frm3dMaze.resx"/>
+        <EmbeddedResource Include="Forms\frm3dMazeStage2.resx"/>
+        <EmbeddedResource Include="Forms\frmAdjacentLetters.resx"/>
+        <EmbeddedResource Include="Forms\frmAdventureGame.resx"/>
+        <EmbeddedResource Include="Forms\frmAlphabet.resx"/>
+        <EmbeddedResource Include="Forms\frmAnagrams.resx"/>
+        <EmbeddedResource Include="Forms\frmBlindAlley.resx"/>
+        <EmbeddedResource Include="Forms\frmButton.resx"/>
+        <EmbeddedResource Include="Forms\frmColourFlash.resx"/>
+        <EmbeddedResource Include="Forms\frmComplicatedWires.resx"/>
+        <EmbeddedResource Include="Forms\frmEdgeworkInput.resx"/>
+        <EmbeddedResource Include="Forms\frmEdgeworkMode.resx"/>
+        <EmbeddedResource Include="Forms\frmFollowTheLeader.resx"/>
+        <EmbeddedResource Include="Forms\frmKeypads.resx"/>
+        <EmbeddedResource Include="Forms\frmKnob.resx"/>
+        <EmbeddedResource Include="Forms\frmLEDEncryption.resx"/>
+        <EmbeddedResource Include="Forms\frmMain.resx"/>
+        <EmbeddedResource Include="Forms\frmMaze.resx"/>
+        <EmbeddedResource Include="Forms\frmMazeAnswer.resx"/>
+        <EmbeddedResource Include="Forms\frmMemory.resx"/>
+        <EmbeddedResource Include="Forms\frmPassword.resx"/>
+        <EmbeddedResource Include="Forms\frmPlates.resx"/>
+        <EmbeddedResource Include="Forms\frmSimon.resx"/>
+        <EmbeddedResource Include="Forms\frmSkewedSlots.resx"/>
+        <EmbeddedResource Include="Forms\frmWhosOnFirst.resx"/>
+        <EmbeddedResource Include="Forms\frmWires.resx"/>
+        <EmbeddedResource Include="Forms\frmWireSequences.resx"/>
+        <EmbeddedResource Include="Forms\ModuleForm.resx"/>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="Files\Passwords.txt"/>
+        <Content Include="Files\Who's On First.txt"/>
+        <Content Include="Keypad Pictures\0.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\3.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\6.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\A.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\AE.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\B.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Backwards C.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Black Star.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Butt.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\C.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Copyright.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\E.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\H.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Hashtag.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Lambda.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Lightning.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\N.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\O.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Omega.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Paragraph.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Question Mark.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Smily Face.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Squid.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Swirl.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Trident.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\Unfinished R.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\White Star.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Keypad Pictures\X.PNG">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Maze Arrows\down arrow.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Maze Arrows\left arrow.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Maze Arrows\right arrow.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Maze Arrows\up arrow.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
