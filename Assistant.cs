@@ -2,14 +2,31 @@
 
 public class Assistant
 {
-    public static Assistant instance = null!;
+    public static Assistant Instance = null!;
 
-    public Bomb bomb = null!;
+    public Bomb Bomb = null!;
 
-    public int strikes;
+    public int Strikes;
 
-    public static void init()
+    public static void Init()
     {
-        instance = new Assistant();
+        Instance = new Assistant();
+    }
+
+    public void strikeButton(bool shift)
+    {
+        if (shift)
+        {
+            Strikes--;
+            Utils.showMessageBox("Removed a strike");
+            return;
+        }
+        Strikes++;
+        Utils.showMessageBox("Added a strike");
+    }
+
+    public void backButton()
+    {
+        Program.switchForm(Utils.getMainForm());        
     }
 }

@@ -1,284 +1,277 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{92E35B76-D295-46B7-B445-BA7531F1E42E}</ProjectGuid>
-        <OutputType>WinExe</OutputType>
-        <RootNamespace>KTANE_Assistant</RootNamespace>
-        <AssemblyName>KTANE_Assistant</AssemblyName>
-        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-        <Deterministic>true</Deterministic>
-        <LangVersion>12</LangVersion>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="System"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Drawing"/>
-        <Reference Include="System.Windows.Forms"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Assistant.cs"/>
-        <Compile Include="Bomb.cs"/>
-        <Compile Include="Forms\frm3dMaze.cs"/>
-        <Compile Include="Forms\frm3dMaze.Designer.cs"/>
-        <Compile Include="Forms\frm3dMazeStage2.cs"/>
-        <Compile Include="Forms\frm3dMazeStage2.Designer.cs"/>
-        <Compile Include="Forms\frmAdjacentLetters.cs"/>
-        <Compile Include="Forms\frmAdjacentLetters.Designer.cs"/>
-        <Compile Include="Forms\frmAdventureGame.cs"/>
-        <Compile Include="Forms\frmAdventureGame.Designer.cs"/>
-        <Compile Include="Forms\frmAlphabet.cs"/>
-        <Compile Include="Forms\frmAlphabet.Designer.cs"/>
-        <Compile Include="Forms\frmAnagrams.cs"/>
-        <Compile Include="Forms\frmAnagrams.Designer.cs"/>
-        <Compile Include="Forms\frmBlindAlley.cs"/>
-        <Compile Include="Forms\frmBlindAlley.Designer.cs"/>
-        <Compile Include="Forms\frmButton.cs"/>
-        <Compile Include="Forms\frmButton.Designer.cs"/>
-        <Compile Include="Forms\frmColourFlash.cs"/>
-        <Compile Include="Forms\frmColourFlash.Designer.cs"/>
-        <Compile Include="Forms\frmComplicatedWires.cs"/>
-        <Compile Include="Forms\frmComplicatedWires.Designer.cs"/>
-        <Compile Include="Forms\frmEdgeworkInput.cs"/>
-        <Compile Include="Forms\frmEdgeworkInput.Designer.cs"/>
-        <Compile Include="Forms\frmEdgeworkMode.cs"/>
-        <Compile Include="Forms\frmEdgeworkMode.Designer.cs"/>
-        <Compile Include="Forms\frmFollowTheLeader.cs"/>
-        <Compile Include="Forms\frmFollowTheLeader.Designer.cs"/>
-        <Compile Include="Forms\frmKeypads.cs"/>
-        <Compile Include="Forms\frmKeypads.Designer.cs"/>
-        <Compile Include="Forms\frmKnob.cs"/>
-        <Compile Include="Forms\frmKnob.Designer.cs"/>
-        <Compile Include="Forms\frmLEDEncryption.cs"/>
-        <Compile Include="Forms\frmLEDEncryption.Designer.cs"/>
-        <Compile Include="Forms\frmMain.cs"/>
-        <Compile Include="Forms\frmMain.Designer.cs"/>
-        <Compile Include="Forms\frmMaze.cs"/>
-        <Compile Include="Forms\frmMaze.Designer.cs"/>
-        <Compile Include="Forms\frmMazeAnswer.cs"/>
-        <Compile Include="Forms\frmMazeAnswer.Designer.cs"/>
-        <Compile Include="Forms\frmMemory.cs"/>
-        <Compile Include="Forms\frmMemory.Designer.cs"/>
-        <Compile Include="Forms\frmPassword.cs"/>
-        <Compile Include="Forms\frmPassword.Designer.cs"/>
-        <Compile Include="Forms\frmPlates.cs"/>
-        <Compile Include="Forms\frmPlates.Designer.cs"/>
-        <Compile Include="Forms\frmSimon.cs"/>
-        <Compile Include="Forms\frmSimon.Designer.cs"/>
-        <Compile Include="Forms\frmSkewedSlots.cs"/>
-        <Compile Include="Forms\frmSkewedSlots.Designer.cs"/>
-        <Compile Include="Forms\frmWhosOnFirst.cs"/>
-        <Compile Include="Forms\frmWhosOnFirst.Designer.cs"/>
-        <Compile Include="Forms\frmWires.cs"/>
-        <Compile Include="Forms\frmWires.Designer.cs"/>
-        <Compile Include="Forms\frmWireSequences.cs"/>
-        <Compile Include="Forms\frmWireSequences.Designer.cs"/>
-        <Compile Include="Forms\ModuleForm.cs"/>
-        <Compile Include="Forms\ModuleForm.Designer.cs"/>
-        <Compile Include="GlobalUsing.cs"/>
-        <Compile Include="Indicator.cs"/>
-        <Compile Include="Modules\3DMaze.cs"/>
-        <Compile Include="Modules\AdjacentLetters.cs"/>
-        <Compile Include="Modules\AdventureGame.cs"/>
-        <Compile Include="Modules\Alphabet.cs"/>
-        <Compile Include="Modules\blindAlley.cs"/>
-        <Compile Include="Modules\Button.cs"/>
-        <Compile Include="Modules\ColourFlash.cs"/>
-        <Compile Include="Modules\ComplicatedWires.cs"/>
-        <Compile Include="Modules\followTheLeader.cs"/>
-        <Compile Include="Modules\Keypads.cs"/>
-        <Compile Include="Modules\Knob.cs"/>
-        <Compile Include="Modules\LEDEncryption.cs"/>
-        <Compile Include="Modules\Maze.cs"/>
-        <Compile Include="Modules\Memory.cs"/>
-        <Compile Include="Modules\Module.cs"/>
-        <Compile Include="Modules\Password.cs"/>
-        <Compile Include="Modules\SkewedSlots.cs"/>
-        <Compile Include="Modules\Wires.cs"/>
-        <Compile Include="Modules\WireSequences.cs"/>
-        <Compile Include="Plate.cs"/>
-        <Compile Include="Program.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="Utils.cs"/>
-        <EmbeddedResource Include="Forms\frm3dMaze.resx"/>
-        <EmbeddedResource Include="Forms\frm3dMazeStage2.resx"/>
-        <EmbeddedResource Include="Forms\frmAdjacentLetters.resx"/>
-        <EmbeddedResource Include="Forms\frmAdventureGame.resx"/>
-        <EmbeddedResource Include="Forms\frmAlphabet.resx"/>
-        <EmbeddedResource Include="Forms\frmAnagrams.resx"/>
-        <EmbeddedResource Include="Forms\frmBlindAlley.resx"/>
-        <EmbeddedResource Include="Forms\frmButton.resx"/>
-        <EmbeddedResource Include="Forms\frmColourFlash.resx"/>
-        <EmbeddedResource Include="Forms\frmComplicatedWires.resx"/>
-        <EmbeddedResource Include="Forms\frmEdgeworkInput.resx"/>
-        <EmbeddedResource Include="Forms\frmEdgeworkMode.resx"/>
-        <EmbeddedResource Include="Forms\frmFollowTheLeader.resx"/>
-        <EmbeddedResource Include="Forms\frmKeypads.resx"/>
-        <EmbeddedResource Include="Forms\frmKnob.resx"/>
-        <EmbeddedResource Include="Forms\frmLEDEncryption.resx"/>
-        <EmbeddedResource Include="Forms\frmMain.resx"/>
-        <EmbeddedResource Include="Forms\frmMaze.resx"/>
-        <EmbeddedResource Include="Forms\frmMazeAnswer.resx"/>
-        <EmbeddedResource Include="Forms\frmMemory.resx"/>
-        <EmbeddedResource Include="Forms\frmPassword.resx"/>
-        <EmbeddedResource Include="Forms\frmPlates.resx"/>
-        <EmbeddedResource Include="Forms\frmSimon.resx"/>
-        <EmbeddedResource Include="Forms\frmSkewedSlots.resx"/>
-        <EmbeddedResource Include="Forms\frmWhosOnFirst.resx"/>
-        <EmbeddedResource Include="Forms\frmWires.resx"/>
-        <EmbeddedResource Include="Forms\frmWireSequences.resx"/>
-        <EmbeddedResource Include="Forms\ModuleForm.resx"/>
-        <EmbeddedResource Include="Properties\Resources.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-            <SubType>Designer</SubType>
-        </EmbeddedResource>
-        <Compile Include="Properties\Resources.Designer.cs">
-            <AutoGen>True</AutoGen>
-            <DependentUpon>Resources.resx</DependentUpon>
-        </Compile>
-        <None Include="Properties\Settings.settings">
-            <Generator>SettingsSingleFileGenerator</Generator>
-            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-        </None>
-        <Compile Include="Properties\Settings.Designer.cs">
-            <AutoGen>True</AutoGen>
-            <DependentUpon>Settings.settings</DependentUpon>
-            <DesignTimeSharedInput>True</DesignTimeSharedInput>
-        </Compile>
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="App.config"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="Files\Passwords.txt">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Files\Who's On First.txt">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\0.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\3.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\6.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\A.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\AE.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\B.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Backwards C.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Black Star.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Butt.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\C.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Copyright.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\E.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\H.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Hashtag.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Lambda.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Lightning.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\N.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\O.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Omega.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Paragraph.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Question Mark.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Smily Face.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Squid.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Swirl.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Trident.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\Unfinished R.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\White Star.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Keypad Pictures\X.PNG">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Maze Arrows\down arrow.png">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Maze Arrows\left arrow.png">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Maze Arrows\right arrow.png">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="Maze Arrows\up arrow.png">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <RootNamespace>KTANE_Assistant</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+	 <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Astrology\Air.png" />
+    <None Remove="Resources\Astrology\Aquarius.png" />
+    <None Remove="Resources\Astrology\Aries.png" />
+    <None Remove="Resources\Astrology\Cancer.png" />
+    <None Remove="Resources\Astrology\Capricorn.png" />
+    <None Remove="Resources\Astrology\Earth.png" />
+    <None Remove="Resources\Astrology\Fire.png" />
+    <None Remove="Resources\Astrology\Gemini.png" />
+    <None Remove="Resources\Astrology\Jupiter.png" />
+    <None Remove="Resources\Astrology\Leo.png" />
+    <None Remove="Resources\Astrology\Libra.png" />
+    <None Remove="Resources\Astrology\Mars.png" />
+    <None Remove="Resources\Astrology\Mercury.png" />
+    <None Remove="Resources\Astrology\Moon.png" />
+    <None Remove="Resources\Astrology\Neptune.png" />
+    <None Remove="Resources\Astrology\Pisces.png" />
+    <None Remove="Resources\Astrology\Pluto.png" />
+    <None Remove="Resources\Astrology\Sagittarius.png" />
+    <None Remove="Resources\Astrology\Saturn.png" />
+    <None Remove="Resources\Astrology\Scorpio.png" />
+    <None Remove="Resources\Astrology\Sun.png" />
+    <None Remove="Resources\Astrology\Taurus.png" />
+    <None Remove="Resources\Astrology\Uranus.png" />
+    <None Remove="Resources\Astrology\Venus.png" />
+    <None Remove="Resources\Astrology\Virgo.png" />
+    <None Remove="Resources\Astrology\Water.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Astrology\Air.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Aquarius.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Aries.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Cancer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Capricorn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Earth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Fire.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Gemini.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Jupiter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Leo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Libra.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Mars.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Mercury.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Moon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Neptune.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Pisces.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Pluto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Sagittarius.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Saturn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Scorpio.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Sun.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Taurus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Uranus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Venus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Virgo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Astrology\Water.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WAConverter">
+      <HintPath>C:\Users\Jolyon Everett\Documents\WinForms2AvaloniaConverter\bin\Debug\net6.0-windows\WAConverter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\frmAstrologyBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\frmAstrologyElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\modules A-G.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\modules H-N.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\modules O-U.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\modules V-Z.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Astrology\BodyZodiacScores.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Astrology\ElementBodyScores.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Astrology\ElementZodiacScores.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\0.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\3.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\6.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\A.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\AE.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\B.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Backwards C.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Black Star.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Butt.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\C.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Copyright.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\E.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\H.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Hashtag.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Lambda.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Lightning.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\N.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\O.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Omega.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Paragraph.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Question Mark.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Smily Face.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Squid.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Swirl.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Trident.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\Unfinished R.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\White Star.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Keypad\X.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Maze\down arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Maze\left arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Maze\right arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Maze\up arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Who%27s on first\Who%27s On First.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

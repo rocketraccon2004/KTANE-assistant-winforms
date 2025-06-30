@@ -65,10 +65,6 @@
             this.txtColumn4Row1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnSolve
-            // 
-            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -466,9 +462,6 @@
             this.Controls.SetChildIndex(this.txtColumn5Row4, 0);
             this.Controls.SetChildIndex(this.txtColumn5Row5, 0);
             this.Controls.SetChildIndex(this.txtColumn5Row6, 0);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.txtColumn4Row1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();

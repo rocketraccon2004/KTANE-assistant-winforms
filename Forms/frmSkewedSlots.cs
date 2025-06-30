@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmSkewedSlots : ModuleForm
+public partial class frmSkewedSlots : Form
 {
     private SkewedSlots Module;
     private bool solving;

@@ -72,13 +72,12 @@ partial class frmEdgeworkInput
         batteryLabel = new Label();
         serialNumberTextBox = new TextBox();
         serialNumberLabel = new Label();
-        dayOfWeekComboBox = new ComboBox();
-        dayOfWeekLabel = new Label();
+        btnReset = new Button();
         SuspendLayout();
         // 
         // portPlateNumTextBox
         // 
-        portPlateNumTextBox.Location = new Point(106, 425);
+        portPlateNumTextBox.Location = new Point(99, 401);
         portPlateNumTextBox.Margin = new Padding(2);
         portPlateNumTextBox.Name = "portPlateNumTextBox";
         portPlateNumTextBox.Size = new Size(138, 23);
@@ -87,7 +86,7 @@ partial class frmEdgeworkInput
         // label1
         // 
         label1.AutoSize = true;
-        label1.Location = new Point(28, 425);
+        label1.Location = new Point(21, 401);
         label1.Margin = new Padding(2, 0, 2, 0);
         label1.Name = "label1";
         label1.Size = new Size(61, 15);
@@ -96,7 +95,7 @@ partial class frmEdgeworkInput
         // 
         // batteryHolderTextBox
         // 
-        batteryHolderTextBox.Location = new Point(146, 82);
+        batteryHolderTextBox.Location = new Point(139, 58);
         batteryHolderTextBox.Margin = new Padding(2);
         batteryHolderTextBox.Name = "batteryHolderTextBox";
         batteryHolderTextBox.Size = new Size(131, 23);
@@ -105,7 +104,7 @@ partial class frmEdgeworkInput
         // batteryHolderLabel
         // 
         batteryHolderLabel.AutoSize = true;
-        batteryHolderLabel.Location = new Point(38, 82);
+        batteryHolderLabel.Location = new Point(31, 58);
         batteryHolderLabel.Margin = new Padding(2, 0, 2, 0);
         batteryHolderLabel.Name = "batteryHolderLabel";
         batteryHolderLabel.Size = new Size(86, 15);
@@ -115,7 +114,7 @@ partial class frmEdgeworkInput
         // carLitCheckBox
         // 
         carLitCheckBox.AutoSize = true;
-        carLitCheckBox.Location = new Point(185, 157);
+        carLitCheckBox.Location = new Point(178, 133);
         carLitCheckBox.Margin = new Padding(2);
         carLitCheckBox.Name = "carLitCheckBox";
         carLitCheckBox.Size = new Size(39, 19);
@@ -126,7 +125,7 @@ partial class frmEdgeworkInput
         // carVisibleCheckBox
         // 
         carVisibleCheckBox.AutoSize = true;
-        carVisibleCheckBox.Location = new Point(119, 157);
+        carVisibleCheckBox.Location = new Point(112, 133);
         carVisibleCheckBox.Margin = new Padding(2);
         carVisibleCheckBox.Name = "carVisibleCheckBox";
         carVisibleCheckBox.Size = new Size(60, 19);
@@ -137,7 +136,7 @@ partial class frmEdgeworkInput
         // clrLitCheckBox
         // 
         clrLitCheckBox.AutoSize = true;
-        clrLitCheckBox.Location = new Point(185, 181);
+        clrLitCheckBox.Location = new Point(178, 157);
         clrLitCheckBox.Margin = new Padding(2);
         clrLitCheckBox.Name = "clrLitCheckBox";
         clrLitCheckBox.Size = new Size(39, 19);
@@ -148,7 +147,7 @@ partial class frmEdgeworkInput
         // clrVisibleCheckBox
         // 
         clrVisibleCheckBox.AutoSize = true;
-        clrVisibleCheckBox.Location = new Point(119, 181);
+        clrVisibleCheckBox.Location = new Point(112, 157);
         clrVisibleCheckBox.Margin = new Padding(2);
         clrVisibleCheckBox.Name = "clrVisibleCheckBox";
         clrVisibleCheckBox.Size = new Size(60, 19);
@@ -159,7 +158,7 @@ partial class frmEdgeworkInput
         // frkLitCheckBox
         // 
         frkLitCheckBox.AutoSize = true;
-        frkLitCheckBox.Location = new Point(185, 205);
+        frkLitCheckBox.Location = new Point(178, 181);
         frkLitCheckBox.Margin = new Padding(2);
         frkLitCheckBox.Name = "frkLitCheckBox";
         frkLitCheckBox.Size = new Size(39, 19);
@@ -170,7 +169,7 @@ partial class frmEdgeworkInput
         // frkVisibleCheckBox
         // 
         frkVisibleCheckBox.AutoSize = true;
-        frkVisibleCheckBox.Location = new Point(119, 205);
+        frkVisibleCheckBox.Location = new Point(112, 181);
         frkVisibleCheckBox.Margin = new Padding(2);
         frkVisibleCheckBox.Name = "frkVisibleCheckBox";
         frkVisibleCheckBox.Size = new Size(60, 19);
@@ -181,7 +180,7 @@ partial class frmEdgeworkInput
         // frqLitCheckBox
         // 
         frqLitCheckBox.AutoSize = true;
-        frqLitCheckBox.Location = new Point(185, 230);
+        frqLitCheckBox.Location = new Point(178, 206);
         frqLitCheckBox.Margin = new Padding(2);
         frqLitCheckBox.Name = "frqLitCheckBox";
         frqLitCheckBox.Size = new Size(39, 19);
@@ -192,7 +191,7 @@ partial class frmEdgeworkInput
         // frqVisibleCheckBox
         // 
         frqVisibleCheckBox.AutoSize = true;
-        frqVisibleCheckBox.Location = new Point(119, 230);
+        frqVisibleCheckBox.Location = new Point(112, 206);
         frqVisibleCheckBox.Margin = new Padding(2);
         frqVisibleCheckBox.Name = "frqVisibleCheckBox";
         frqVisibleCheckBox.Size = new Size(60, 19);
@@ -203,7 +202,7 @@ partial class frmEdgeworkInput
         // indLitCheckBox
         // 
         indLitCheckBox.AutoSize = true;
-        indLitCheckBox.Location = new Point(185, 254);
+        indLitCheckBox.Location = new Point(178, 230);
         indLitCheckBox.Margin = new Padding(2);
         indLitCheckBox.Name = "indLitCheckBox";
         indLitCheckBox.Size = new Size(39, 19);
@@ -214,7 +213,7 @@ partial class frmEdgeworkInput
         // msaVisibleCheckBox
         // 
         msaVisibleCheckBox.AutoSize = true;
-        msaVisibleCheckBox.Location = new Point(119, 278);
+        msaVisibleCheckBox.Location = new Point(112, 254);
         msaVisibleCheckBox.Margin = new Padding(2);
         msaVisibleCheckBox.Name = "msaVisibleCheckBox";
         msaVisibleCheckBox.Size = new Size(60, 19);
@@ -225,7 +224,7 @@ partial class frmEdgeworkInput
         // msaLitCheckBox
         // 
         msaLitCheckBox.AutoSize = true;
-        msaLitCheckBox.Location = new Point(185, 278);
+        msaLitCheckBox.Location = new Point(178, 254);
         msaLitCheckBox.Margin = new Padding(2);
         msaLitCheckBox.Name = "msaLitCheckBox";
         msaLitCheckBox.Size = new Size(39, 19);
@@ -236,7 +235,7 @@ partial class frmEdgeworkInput
         // indVisibleCheckBox
         // 
         indVisibleCheckBox.AutoSize = true;
-        indVisibleCheckBox.Location = new Point(119, 254);
+        indVisibleCheckBox.Location = new Point(112, 230);
         indVisibleCheckBox.Margin = new Padding(2);
         indVisibleCheckBox.Name = "indVisibleCheckBox";
         indVisibleCheckBox.Size = new Size(60, 19);
@@ -247,7 +246,7 @@ partial class frmEdgeworkInput
         // nsaLitCheckBox
         // 
         nsaLitCheckBox.AutoSize = true;
-        nsaLitCheckBox.Location = new Point(185, 302);
+        nsaLitCheckBox.Location = new Point(178, 278);
         nsaLitCheckBox.Margin = new Padding(2);
         nsaLitCheckBox.Name = "nsaLitCheckBox";
         nsaLitCheckBox.Size = new Size(39, 19);
@@ -258,7 +257,7 @@ partial class frmEdgeworkInput
         // trnVisibleCheckBox
         // 
         trnVisibleCheckBox.AutoSize = true;
-        trnVisibleCheckBox.Location = new Point(119, 376);
+        trnVisibleCheckBox.Location = new Point(112, 352);
         trnVisibleCheckBox.Margin = new Padding(2);
         trnVisibleCheckBox.Name = "trnVisibleCheckBox";
         trnVisibleCheckBox.Size = new Size(60, 19);
@@ -269,7 +268,7 @@ partial class frmEdgeworkInput
         // sndLitCheckBox
         // 
         sndLitCheckBox.AutoSize = true;
-        sndLitCheckBox.Location = new Point(185, 352);
+        sndLitCheckBox.Location = new Point(178, 328);
         sndLitCheckBox.Margin = new Padding(2);
         sndLitCheckBox.Name = "sndLitCheckBox";
         sndLitCheckBox.Size = new Size(39, 19);
@@ -280,7 +279,7 @@ partial class frmEdgeworkInput
         // nsaVisibleCheckBox
         // 
         nsaVisibleCheckBox.AutoSize = true;
-        nsaVisibleCheckBox.Location = new Point(119, 302);
+        nsaVisibleCheckBox.Location = new Point(112, 278);
         nsaVisibleCheckBox.Margin = new Padding(2);
         nsaVisibleCheckBox.Name = "nsaVisibleCheckBox";
         nsaVisibleCheckBox.Size = new Size(60, 19);
@@ -291,7 +290,7 @@ partial class frmEdgeworkInput
         // trnLitCheckBox
         // 
         trnLitCheckBox.AutoSize = true;
-        trnLitCheckBox.Location = new Point(185, 376);
+        trnLitCheckBox.Location = new Point(178, 352);
         trnLitCheckBox.Margin = new Padding(2);
         trnLitCheckBox.Name = "trnLitCheckBox";
         trnLitCheckBox.Size = new Size(39, 19);
@@ -302,7 +301,7 @@ partial class frmEdgeworkInput
         // sndVisibleCheckBox
         // 
         sndVisibleCheckBox.AutoSize = true;
-        sndVisibleCheckBox.Location = new Point(119, 352);
+        sndVisibleCheckBox.Location = new Point(112, 328);
         sndVisibleCheckBox.Margin = new Padding(2);
         sndVisibleCheckBox.Name = "sndVisibleCheckBox";
         sndVisibleCheckBox.Size = new Size(60, 19);
@@ -313,7 +312,7 @@ partial class frmEdgeworkInput
         // sigLitCheckBox
         // 
         sigLitCheckBox.AutoSize = true;
-        sigLitCheckBox.Location = new Point(185, 327);
+        sigLitCheckBox.Location = new Point(178, 303);
         sigLitCheckBox.Margin = new Padding(2);
         sigLitCheckBox.Name = "sigLitCheckBox";
         sigLitCheckBox.Size = new Size(39, 19);
@@ -324,7 +323,7 @@ partial class frmEdgeworkInput
         // sigVisibleCheckBox
         // 
         sigVisibleCheckBox.AutoSize = true;
-        sigVisibleCheckBox.Location = new Point(119, 327);
+        sigVisibleCheckBox.Location = new Point(112, 303);
         sigVisibleCheckBox.Margin = new Padding(2);
         sigVisibleCheckBox.Name = "sigVisibleCheckBox";
         sigVisibleCheckBox.Size = new Size(60, 19);
@@ -335,7 +334,7 @@ partial class frmEdgeworkInput
         // bobLitCheckBox
         // 
         bobLitCheckBox.AutoSize = true;
-        bobLitCheckBox.Location = new Point(185, 132);
+        bobLitCheckBox.Location = new Point(178, 108);
         bobLitCheckBox.Margin = new Padding(2);
         bobLitCheckBox.Name = "bobLitCheckBox";
         bobLitCheckBox.Size = new Size(39, 19);
@@ -346,7 +345,7 @@ partial class frmEdgeworkInput
         // bobVisibleCheckBox
         // 
         bobVisibleCheckBox.AutoSize = true;
-        bobVisibleCheckBox.Location = new Point(119, 132);
+        bobVisibleCheckBox.Location = new Point(112, 108);
         bobVisibleCheckBox.Margin = new Padding(2);
         bobVisibleCheckBox.Name = "bobVisibleCheckBox";
         bobVisibleCheckBox.Size = new Size(60, 19);
@@ -356,7 +355,7 @@ partial class frmEdgeworkInput
         // 
         // submitButton
         // 
-        submitButton.Location = new Point(106, 464);
+        submitButton.Location = new Point(99, 440);
         submitButton.Margin = new Padding(2);
         submitButton.Name = "submitButton";
         submitButton.Size = new Size(75, 28);
@@ -368,7 +367,7 @@ partial class frmEdgeworkInput
         // portLabel
         // 
         portLabel.AutoSize = true;
-        portLabel.Location = new Point(138, 398);
+        portLabel.Location = new Point(131, 374);
         portLabel.Margin = new Padding(2, 0, 2, 0);
         portLabel.Name = "portLabel";
         portLabel.Size = new Size(29, 15);
@@ -378,17 +377,17 @@ partial class frmEdgeworkInput
         // trnLabel
         // 
         trnLabel.AutoSize = true;
-        trnLabel.Location = new Point(68, 376);
+        trnLabel.Location = new Point(61, 352);
         trnLabel.Margin = new Padding(2, 0, 2, 0);
         trnLabel.Name = "trnLabel";
-        trnLabel.Size = new Size(32, 15);
+        trnLabel.Size = new Size(33, 15);
         trnLabel.TabIndex = 17;
         trnLabel.Text = "TRN:";
         // 
         // sndLabel
         // 
         sndLabel.AutoSize = true;
-        sndLabel.Location = new Point(68, 352);
+        sndLabel.Location = new Point(61, 328);
         sndLabel.Margin = new Padding(2, 0, 2, 0);
         sndLabel.Name = "sndLabel";
         sndLabel.Size = new Size(33, 15);
@@ -398,7 +397,7 @@ partial class frmEdgeworkInput
         // sigLabel
         // 
         sigLabel.AutoSize = true;
-        sigLabel.Location = new Point(68, 327);
+        sigLabel.Location = new Point(61, 303);
         sigLabel.Margin = new Padding(2, 0, 2, 0);
         sigLabel.Name = "sigLabel";
         sigLabel.Size = new Size(27, 15);
@@ -408,7 +407,7 @@ partial class frmEdgeworkInput
         // nsaLabel
         // 
         nsaLabel.AutoSize = true;
-        nsaLabel.Location = new Point(68, 302);
+        nsaLabel.Location = new Point(61, 278);
         nsaLabel.Margin = new Padding(2, 0, 2, 0);
         nsaLabel.Name = "nsaLabel";
         nsaLabel.Size = new Size(33, 15);
@@ -418,7 +417,7 @@ partial class frmEdgeworkInput
         // msaLabel
         // 
         msaLabel.AutoSize = true;
-        msaLabel.Location = new Point(68, 278);
+        msaLabel.Location = new Point(61, 254);
         msaLabel.Margin = new Padding(2, 0, 2, 0);
         msaLabel.Name = "msaLabel";
         msaLabel.Size = new Size(35, 15);
@@ -428,7 +427,7 @@ partial class frmEdgeworkInput
         // frqLabel
         // 
         frqLabel.AutoSize = true;
-        frqLabel.Location = new Point(68, 230);
+        frqLabel.Location = new Point(61, 206);
         frqLabel.Margin = new Padding(2, 0, 2, 0);
         frqLabel.Name = "frqLabel";
         frqLabel.Size = new Size(32, 15);
@@ -438,7 +437,7 @@ partial class frmEdgeworkInput
         // frkLabel
         // 
         frkLabel.AutoSize = true;
-        frkLabel.Location = new Point(68, 205);
+        frkLabel.Location = new Point(61, 181);
         frkLabel.Margin = new Padding(2, 0, 2, 0);
         frkLabel.Name = "frkLabel";
         frkLabel.Size = new Size(30, 15);
@@ -448,7 +447,7 @@ partial class frmEdgeworkInput
         // indLabel
         // 
         indLabel.AutoSize = true;
-        indLabel.Location = new Point(68, 254);
+        indLabel.Location = new Point(61, 230);
         indLabel.Margin = new Padding(2, 0, 2, 0);
         indLabel.Name = "indLabel";
         indLabel.Size = new Size(30, 15);
@@ -458,7 +457,7 @@ partial class frmEdgeworkInput
         // clrLabel
         // 
         clrLabel.AutoSize = true;
-        clrLabel.Location = new Point(68, 181);
+        clrLabel.Location = new Point(61, 157);
         clrLabel.Margin = new Padding(2, 0, 2, 0);
         clrLabel.Name = "clrLabel";
         clrLabel.Size = new Size(31, 15);
@@ -468,7 +467,7 @@ partial class frmEdgeworkInput
         // carLabel
         // 
         carLabel.AutoSize = true;
-        carLabel.Location = new Point(68, 157);
+        carLabel.Location = new Point(61, 133);
         carLabel.Margin = new Padding(2, 0, 2, 0);
         carLabel.Name = "carLabel";
         carLabel.Size = new Size(33, 15);
@@ -478,7 +477,7 @@ partial class frmEdgeworkInput
         // bobLabel
         // 
         bobLabel.AutoSize = true;
-        bobLabel.Location = new Point(68, 132);
+        bobLabel.Location = new Point(61, 108);
         bobLabel.Margin = new Padding(2, 0, 2, 0);
         bobLabel.Name = "bobLabel";
         bobLabel.Size = new Size(33, 15);
@@ -488,7 +487,7 @@ partial class frmEdgeworkInput
         // indicatorLabel
         // 
         indicatorLabel.AutoSize = true;
-        indicatorLabel.Location = new Point(127, 107);
+        indicatorLabel.Location = new Point(120, 83);
         indicatorLabel.Margin = new Padding(2, 0, 2, 0);
         indicatorLabel.Name = "indicatorLabel";
         indicatorLabel.Size = new Size(54, 15);
@@ -497,7 +496,7 @@ partial class frmEdgeworkInput
         // 
         // batteryTextBox
         // 
-        batteryTextBox.Location = new Point(146, 58);
+        batteryTextBox.Location = new Point(139, 34);
         batteryTextBox.Margin = new Padding(2);
         batteryTextBox.Name = "batteryTextBox";
         batteryTextBox.Size = new Size(131, 23);
@@ -506,7 +505,7 @@ partial class frmEdgeworkInput
         // batteryLabel
         // 
         batteryLabel.AutoSize = true;
-        batteryLabel.Location = new Point(38, 58);
+        batteryLabel.Location = new Point(31, 34);
         batteryLabel.Margin = new Padding(2, 0, 2, 0);
         batteryLabel.Name = "batteryLabel";
         batteryLabel.Size = new Size(58, 15);
@@ -515,7 +514,7 @@ partial class frmEdgeworkInput
         // 
         // serialNumberTextBox
         // 
-        serialNumberTextBox.Location = new Point(146, 33);
+        serialNumberTextBox.Location = new Point(139, 9);
         serialNumberTextBox.Margin = new Padding(2);
         serialNumberTextBox.Name = "serialNumberTextBox";
         serialNumberTextBox.Size = new Size(131, 23);
@@ -524,38 +523,31 @@ partial class frmEdgeworkInput
         // serialNumberLabel
         // 
         serialNumberLabel.AutoSize = true;
-        serialNumberLabel.Location = new Point(38, 33);
+        serialNumberLabel.Location = new Point(31, 9);
         serialNumberLabel.Margin = new Padding(2, 0, 2, 0);
         serialNumberLabel.Name = "serialNumberLabel";
         serialNumberLabel.Size = new Size(88, 15);
         serialNumberLabel.TabIndex = 2;
         serialNumberLabel.Text = "Serial Number: ";
         // 
-        // dayOfWeekComboBox
+        // btnReset
         // 
-        dayOfWeekComboBox.FormattingEnabled = true;
-        dayOfWeekComboBox.Location = new Point(146, 8);
-        dayOfWeekComboBox.Margin = new Padding(2);
-        dayOfWeekComboBox.Name = "dayOfWeekComboBox";
-        dayOfWeekComboBox.Size = new Size(131, 23);
-        dayOfWeekComboBox.TabIndex = 0;
-        // 
-        // dayOfWeekLabel
-        // 
-        dayOfWeekLabel.AutoSize = true;
-        dayOfWeekLabel.Location = new Point(38, 8);
-        dayOfWeekLabel.Margin = new Padding(2, 0, 2, 0);
-        dayOfWeekLabel.Name = "dayOfWeekLabel";
-        dayOfWeekLabel.Size = new Size(79, 15);
-        dayOfWeekLabel.TabIndex = 11;
-        dayOfWeekLabel.Text = "Day of Week: ";
+        btnReset.Location = new Point(99, 472);
+        btnReset.Margin = new Padding(2);
+        btnReset.Name = "btnReset";
+        btnReset.Size = new Size(75, 28);
+        btnReset.TabIndex = 82;
+        btnReset.Text = "Reset";
+        btnReset.UseVisualStyleBackColor = true;
+        btnReset.Click += btnReset_Click;
         // 
         // frmEdgeworkInput
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         AutoScroll = true;
-        ClientSize = new Size(301, 504);
+        ClientSize = new Size(301, 523);
+        Controls.Add(btnReset);
         Controls.Add(portPlateNumTextBox);
         Controls.Add(label1);
         Controls.Add(batteryHolderTextBox);
@@ -600,12 +592,54 @@ partial class frmEdgeworkInput
         Controls.Add(batteryLabel);
         Controls.Add(serialNumberTextBox);
         Controls.Add(serialNumberLabel);
-        Controls.Add(dayOfWeekComboBox);
-        Controls.Add(dayOfWeekLabel);
         Margin = new Padding(3, 2, 3, 2);
         Name = "frmEdgeworkInput";
         Text = "Manual Edgework";
-        Load += frmEdgeworkInput_Load;
+        Controls.SetChildIndex(serialNumberLabel, 0);
+        Controls.SetChildIndex(serialNumberTextBox, 0);
+        Controls.SetChildIndex(batteryLabel, 0);
+        Controls.SetChildIndex(batteryTextBox, 0);
+        Controls.SetChildIndex(indicatorLabel, 0);
+        Controls.SetChildIndex(bobLabel, 0);
+        Controls.SetChildIndex(carLabel, 0);
+        Controls.SetChildIndex(clrLabel, 0);
+        Controls.SetChildIndex(indLabel, 0);
+        Controls.SetChildIndex(frkLabel, 0);
+        Controls.SetChildIndex(frqLabel, 0);
+        Controls.SetChildIndex(msaLabel, 0);
+        Controls.SetChildIndex(nsaLabel, 0);
+        Controls.SetChildIndex(sigLabel, 0);
+        Controls.SetChildIndex(sndLabel, 0);
+        Controls.SetChildIndex(trnLabel, 0);
+        Controls.SetChildIndex(portLabel, 0);
+        Controls.SetChildIndex(submitButton, 0);
+        Controls.SetChildIndex(bobVisibleCheckBox, 0);
+        Controls.SetChildIndex(bobLitCheckBox, 0);
+        Controls.SetChildIndex(sigVisibleCheckBox, 0);
+        Controls.SetChildIndex(sigLitCheckBox, 0);
+        Controls.SetChildIndex(sndVisibleCheckBox, 0);
+        Controls.SetChildIndex(trnLitCheckBox, 0);
+        Controls.SetChildIndex(nsaVisibleCheckBox, 0);
+        Controls.SetChildIndex(sndLitCheckBox, 0);
+        Controls.SetChildIndex(trnVisibleCheckBox, 0);
+        Controls.SetChildIndex(nsaLitCheckBox, 0);
+        Controls.SetChildIndex(indVisibleCheckBox, 0);
+        Controls.SetChildIndex(msaLitCheckBox, 0);
+        Controls.SetChildIndex(msaVisibleCheckBox, 0);
+        Controls.SetChildIndex(indLitCheckBox, 0);
+        Controls.SetChildIndex(frqVisibleCheckBox, 0);
+        Controls.SetChildIndex(frqLitCheckBox, 0);
+        Controls.SetChildIndex(frkVisibleCheckBox, 0);
+        Controls.SetChildIndex(frkLitCheckBox, 0);
+        Controls.SetChildIndex(clrVisibleCheckBox, 0);
+        Controls.SetChildIndex(clrLitCheckBox, 0);
+        Controls.SetChildIndex(carVisibleCheckBox, 0);
+        Controls.SetChildIndex(carLitCheckBox, 0);
+        Controls.SetChildIndex(batteryHolderLabel, 0);
+        Controls.SetChildIndex(batteryHolderTextBox, 0);
+        Controls.SetChildIndex(label1, 0);
+        Controls.SetChildIndex(portPlateNumTextBox, 0);
+        Controls.SetChildIndex(btnReset, 0);
         ResumeLayout(false);
         PerformLayout();
     }
@@ -656,6 +690,5 @@ partial class frmEdgeworkInput
     private Label batteryLabel;
     private TextBox serialNumberTextBox;
     private Label serialNumberLabel;
-    private ComboBox dayOfWeekComboBox;
-    private Label dayOfWeekLabel;
+    private Button btnReset;
 }

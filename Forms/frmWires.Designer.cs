@@ -45,20 +45,6 @@ partial class frmWires
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(0, 420);
-            // 
-            // btnStrike
-            // 
-            this.btnStrike.Location = new System.Drawing.Point(211, 420);
-            this.btnStrike.Size = new System.Drawing.Size(215, 84);
-            // 
-            // btnSolve
-            // 
-            this.btnSolve.Location = new System.Drawing.Point(436, 420);
-            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,9 +235,6 @@ partial class frmWires
             this.Controls.SetChildIndex(this.comboBox4, 0);
             this.Controls.SetChildIndex(this.comboBox5, 0);
             this.Controls.SetChildIndex(this.comboBox6, 0);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.ResumeLayout(false);
 
     }

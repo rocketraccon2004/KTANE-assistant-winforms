@@ -2,7 +2,7 @@ using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frm3dMaze : ModuleForm
+public partial class frm3dMaze : Form
 {
     //if the user is currently facing a wall
     private bool facingWall;
@@ -15,7 +15,7 @@ public partial class frm3dMaze : ModuleForm
         UpdateForm();
     }
 
-    public _3DMaze Module { get; private set; }
+    public _3DMaze Module;
 
     public void UpdateForm()
     {
@@ -24,7 +24,7 @@ public partial class frm3dMaze : ModuleForm
         facingWallCheckBox.Checked = false;
     }
 
-    private void submitButton_Click(object sender, EventArgs e)
+    private void btnSolve_Click(object sender, EventArgs e)
     {
         var mazeText = mazeTextBox.Text.ToUpper();
 
@@ -111,8 +111,9 @@ public partial class frm3dMaze : ModuleForm
 
         secondStage = new frm3dMazeStage2(this);
 
-        secondStage.Show();
+        Program.switchForm(secondStage);
     }
+
 
     /// <summary>
     ///     Verifies is path is on current maze
@@ -151,43 +152,43 @@ public partial class frm3dMaze : ModuleForm
 
         //find where user can start
         for (var row = 0; row < 8; row++)
-        for (var col = 0; col < 8; col++)
-            if (CharacterMatch(module.Maze[row, col], newPath[0]))
-            {
-                //Pick a direction and continue to head in that direction for as many steps the user took
-                //and verify that all steps are corret
-                //North
-                if (NorthValid(newPath, row, col))
+            for (var col = 0; col < 8; col++)
+                if (CharacterMatch(module.Maze[row, col], newPath[0]))
                 {
-                    var newRow = row - (newPath.Length - 1);
+                    //Pick a direction and continue to head in that direction for as many steps the user took
+                    //and verify that all steps are corret
+                    //North
+                    if (NorthValid(newPath, row, col))
+                    {
+                        var newRow = row - (newPath.Length - 1);
 
-                    while (newRow < 0) newRow += 8;
+                        while (newRow < 0) newRow += 8;
 
-                    possiblePaths.Add(new int[] { newRow, col, 0 });
+                        possiblePaths.Add(new int[] { newRow, col, 0 });
+                    }
+
+                    //East
+                    if (EastValid(newPath, row, col))
+                        possiblePaths.Add(
+                            new int[3] { row, (col + (newPath.Length - 1)) % 8, 1 }
+                        );
+
+                    //South
+                    if (SouthValid(newPath, row, col))
+                        possiblePaths.Add(
+                            new int[3] { (row + (newPath.Length - 1)) % 8, col, 2 }
+                        );
+
+                    //West
+                    if (WestValid(newPath, row, col))
+                    {
+                        var newCol = col - (newPath.Length - 1);
+
+                        while (newCol < 0) newCol += 8;
+
+                        possiblePaths.Add(new int[3] { row, newCol, 3 });
+                    }
                 }
-
-                //East
-                if (EastValid(newPath, row, col))
-                    possiblePaths.Add(
-                        new int[3] { row, (col + (newPath.Length - 1)) % 8, 1 }
-                    );
-
-                //South
-                if (SouthValid(newPath, row, col))
-                    possiblePaths.Add(
-                        new int[3] { (row + (newPath.Length - 1)) % 8, col, 2 }
-                    );
-
-                //West
-                if (WestValid(newPath, row, col))
-                {
-                    var newCol = col - (newPath.Length - 1);
-
-                    while (newCol < 0) newCol += 8;
-
-                    possiblePaths.Add(new int[3] { row, newCol, 3 });
-                }
-            }
 
         //if one path can't be found, then path user gave was invalid
         return possiblePaths;
@@ -292,5 +293,15 @@ public partial class frm3dMaze : ModuleForm
         var facingWallWest = neighbor.West == null;
 
         return facingWall == facingWallWest;
+    }
+
+    private void btnStrike_Click(object sender, EventArgs e)
+    {
+        Assistant.Instance.strikeButton(ModifierKeys.HasFlag(Keys.Shift));
+    }
+
+    private void btnBack_Click(object sender, EventArgs e)
+    {
+        Assistant.Instance.backButton();
     }
 }

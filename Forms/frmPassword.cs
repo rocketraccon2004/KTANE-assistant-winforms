@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 #nullable enable
-public partial class frmPassword : ModuleForm
+public partial class frmPassword : Form
 {
     private List<string>? _column1;
     private List<string>? _column2;

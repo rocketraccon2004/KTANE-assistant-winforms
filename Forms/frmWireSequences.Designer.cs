@@ -39,10 +39,6 @@ partial class frmWireSequences
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnSolve
-            // 
-            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
-            // 
             // cbWire1Colour
             // 
             this.cbWire1Colour.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,9 +177,6 @@ partial class frmWireSequences
             this.Controls.SetChildIndex(this.cbWire2End, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

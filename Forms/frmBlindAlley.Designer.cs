@@ -138,9 +138,6 @@
 			Name = "frmBlindAlley";
 			Text = "Blind Alley";
 			Load += frmBlindAlley_Load;
-			Controls.SetChildIndex(btnSolve, 0);
-			Controls.SetChildIndex(btnStrike, 0);
-			Controls.SetChildIndex(btnBack, 0);
 			Controls.SetChildIndex(tableLayoutPanel1, 0);
 			tableLayoutPanel1.ResumeLayout(false);
 			ResumeLayout(false);

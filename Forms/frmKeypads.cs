@@ -3,7 +3,7 @@ using Button = System.Windows.Forms.Button;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmKeypads : ModuleForm
+public partial class frmKeypads : Form
 {
     //the name of the selected images
     private string image1Name;
@@ -86,7 +86,7 @@ public partial class frmKeypads : ModuleForm
     /// <param name="fileName">the name of the image</param>
     private Image SetUpImage(string fileName)
     {
-        return Image.FromFile($"Keypad Pictures/{fileName}.PNG");
+        return Image.FromFile($"Resources/Keypad/{fileName}.PNG");
     }
 
     /// <summary>
@@ -148,7 +148,7 @@ public partial class frmKeypads : ModuleForm
             else if (selectedButton == questionMarkButton)
                 fileName = "Question Mark";
             else if (selectedButton == smilyFaceButton)
-                fileName = "Smily Face";
+                fileName = "Smiley Face";
             else if (selectedButton == squidButton)
                 fileName = "Squid";
             else if (selectedButton == swirlButton)

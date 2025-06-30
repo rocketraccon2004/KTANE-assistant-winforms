@@ -61,19 +61,6 @@ partial class frmKeypads
             this.selectedImageButton4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(35, 793);
-            // 
-            // btnStrike
-            // 
-            this.btnStrike.Location = new System.Drawing.Point(360, 793);
-            // 
-            // btnSolve
-            // 
-            this.btnSolve.Location = new System.Drawing.Point(690, 793);
-            this.btnSolve.Click += new System.EventHandler(this.submitButton_Click);
-            // 
             // swirlButton
             // 
             this.swirlButton.Location = new System.Drawing.Point(426, 625);
@@ -425,9 +412,6 @@ partial class frmKeypads
             this.Controls.SetChildIndex(this.unfinishedRButton, 0);
             this.Controls.SetChildIndex(this.tridentButton, 0);
             this.Controls.SetChildIndex(this.swirlButton, 0);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.ResumeLayout(false);
 
     }

@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmColourFlash : ModuleForm
+public partial class frmColourFlash : Form
 {
     private List<string> colours = new();
     private ColourFlash module;

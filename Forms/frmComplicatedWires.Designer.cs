@@ -34,10 +34,6 @@ partial class frmComplicatedWires
             this.cbStar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // btnSolve
-            // 
-            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
-            // 
             // cbRedWire
             // 
             this.cbRedWire.AutoSize = true;
@@ -98,9 +94,6 @@ partial class frmComplicatedWires
             this.Controls.SetChildIndex(this.cbBlueWire, 0);
             this.Controls.SetChildIndex(this.cbLED, 0);
             this.Controls.SetChildIndex(this.cbStar, 0);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

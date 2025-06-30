@@ -2,17 +2,11 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmEdgeworkInput : ModuleForm
+public partial class frmEdgeworkInput : Form
 {
     public frmEdgeworkInput()
     {
         InitializeComponent();
-        disableButtons();
-    }
-
-    private void frmEdgeworkInput_Load(object sender, EventArgs e)
-    {
-        foreach (var s in Enum.GetNames(typeof(Day))) dayOfWeekComboBox.Items.Add(s);
     }
 
     private void submitButton_Click(object sender, EventArgs e)
@@ -21,18 +15,32 @@ public partial class frmEdgeworkInput : ModuleForm
         int holders;
         int plates;
         List<Indicator> indicators;
-        var day = (Day)Enum.Parse(typeof(Day), dayOfWeekComboBox.Text);
-        var serial = serialNumberTextBox.Text;
+        var serial = serialNumberTextBox.Text.ToUpper();
 
-        if (!int.TryParse(serial[5].ToString(), out _)) MessageBox.Show("Invalid Parameter: Serial must end in digit");
-
+        if(serial.Length != 6)
+        {
+            Utils.throwError("Invalid parameter: Serial must be 6 characters");
+        }
+        if (!int.TryParse(serial[5].ToString(), out _))
+        {
+            Utils.throwError("Invalid Parameter: Serial must end in digit");
+            return;
+        }
         if (!int.TryParse(batteryTextBox.Text, out batteries))
-            MessageBox.Show($"Invalid Parameter: Batteries ({batteryTextBox.Text})");
+        {
+            Utils.throwError($"Invalid Parameter: Batteries ({batteryTextBox.Text})");
+            return;
+        }
         if (!int.TryParse(batteryHolderTextBox.Text, out holders))
-            MessageBox.Show($"Invalid Parameter: Holders ({batteryHolderTextBox.Text})");
+        {
+            Utils.throwError($"Invalid Parameter: Holders ({batteryHolderTextBox.Text})");
+            return;
+        }
         if (!int.TryParse(portPlateNumTextBox.Text, out plates))
-            MessageBox.Show($"Invalid Parameter: Plates ({portPlateNumTextBox.Text})");
-
+        {
+            Utils.throwError($"Invalid Parameter: Plates ({portPlateNumTextBox.Text})");
+            return;
+        }
         indicators = new List<Indicator>
         {
             new()
@@ -106,11 +114,28 @@ public partial class frmEdgeworkInput : ModuleForm
         if (plates != 0)
         {
             var p = new frmPlates();
-            p.start(batteries, holders, plates, day, indicators, serial);
+            p.start(batteries, holders, plates, indicators, serial);
             return;
         }
 
-        Assistant.instance.bomb = new Bomb(batteries, holders, serial, day, plates, null, indicators);
+        Assistant.Instance.Bomb = new Bomb(batteries, holders, serial, plates, null, indicators);
         Program.switchForm(Utils.getMainForm());
+    }
+
+    private void btnReset_Click(object sender, EventArgs e)
+    {
+        foreach (Control c in Controls)
+        {
+            if (c is TextBox)
+            {
+                TextBox tb = (TextBox)c;
+                tb.Text = string.Empty;
+            }
+            else if (c is CheckBox)
+            {
+                CheckBox cb = (CheckBox)c;
+                cb.Checked = false;
+            }
+        }
     }
 }

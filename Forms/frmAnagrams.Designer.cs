@@ -32,19 +32,6 @@
 			txtAnagram = new TextBox();
 			SuspendLayout();
 			// 
-			// btnBack
-			// 
-			btnBack.Location = new Point(15, 328);
-			// 
-			// btnStrike
-			// 
-			btnStrike.Location = new Point(284, 328);
-			// 
-			// btnSolve
-			// 
-			btnSolve.Location = new Point(562, 328);
-			btnSolve.Click += btnSolve_Click;
-			// 
 			// label1
 			// 
 			label1.AutoSize = true;
@@ -72,9 +59,6 @@
 			Controls.Add(label1);
 			Name = "frmAnagrams";
 			Text = "Anagrams";
-			Controls.SetChildIndex(btnSolve, 0);
-			Controls.SetChildIndex(btnStrike, 0);
-			Controls.SetChildIndex(btnBack, 0);
 			Controls.SetChildIndex(label1, 0);
 			Controls.SetChildIndex(txtAnagram, 0);
 			ResumeLayout(false);

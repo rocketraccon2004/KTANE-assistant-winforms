@@ -3,7 +3,7 @@ using Button = System.Windows.Forms.Button;
 
 namespace KTANE_Assistant.Forms;
 #nullable enable
-public partial class frmMaze : ModuleForm
+public partial class frmMaze : Form
 {
     private Maze? maze;
 

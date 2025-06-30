@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frm3dMazeStage2 : ModuleForm
+public partial class frm3dMazeStage2 : Form
 {
     private frm3dMaze firstStageForm;
 

@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmWires : ModuleForm
+public partial class frmWires : Form
 {
     private string[] wires;
 

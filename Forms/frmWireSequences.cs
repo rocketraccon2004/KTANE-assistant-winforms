@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmWireSequences : ModuleForm
+public partial class frmWireSequences : Form
 {
     private WireSequences module;
 

@@ -56,22 +56,6 @@
             this.cbColour8 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(32, 395);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            // 
-            // btnStrike
-            // 
-            this.btnStrike.Location = new System.Drawing.Point(228, 395);
-            this.btnStrike.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            // 
-            // btnSolve
-            // 
-            this.btnSolve.Location = new System.Drawing.Point(431, 395);
-            this.btnSolve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -367,9 +351,6 @@
             this.Name = "frmColourFlash";
             this.Text = "Colour Flash";
             this.Load += new System.EventHandler(this.frmColourFlash_Load);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);

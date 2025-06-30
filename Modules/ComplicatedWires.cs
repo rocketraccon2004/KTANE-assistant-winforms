@@ -47,7 +47,7 @@ public class ComplicatedWires : Module
 
         if (redWire & !blueWire & LED)
         {
-            if (Assistant.instance.bomb.batteries >= 2) return cut;
+            if (Assistant.Instance.Bomb.batteries >= 2) return cut;
             return dont;
         }
 
@@ -69,13 +69,21 @@ public class ComplicatedWires : Module
 
         if (!redWire & !blueWire & LED & Star)
         {
-            if (Assistant.instance.bomb.batteries >= 2) return cut;
+            if (Assistant.Instance.Bomb.batteries >= 2) return cut;
             return dont;
         }
 
         if (!redWire & !blueWire & LED & !Star) return dont;
 
         if (!redWire & !blueWire & !LED) return cut;
+        if (!redWire & blueWire & !LED & !Star)
+        {
+            if (!isOdd(bomb.getLastDigitOfSerial()))
+            {
+                return cut;
+            }
+            return dont;
+        }
         return "Error";
     }
 }

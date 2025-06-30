@@ -2,11 +2,10 @@
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 namespace KTANE_Assistant.Forms;
 
-public partial class frmPlates : ModuleForm
+public partial class frmPlates : Form
 {
     private int batteries;
     private int currentIteration = 1;
-    private Day day;
     private int holders;
     private List<Indicator> indicators;
     private Plate[] plateArray;
@@ -16,16 +15,14 @@ public partial class frmPlates : ModuleForm
     public frmPlates()
     {
         InitializeComponent();
-        disableButtons();
     }
 
-    public void start(int batteries, int holders, int plates, Day day, List<Indicator> indicators, string serial)
+    public void start(int batteries, int holders, int plates, List<Indicator> indicators, string serial)
     {
         Program.switchForm(this);
         this.batteries = batteries;
         this.holders = holders;
         this.plates = plates;
-        this.day = day;
         this.indicators = indicators;
         this.serial = serial;
         plateArray = new Plate[plates];
@@ -63,7 +60,7 @@ public partial class frmPlates : ModuleForm
             return;
         }
 
-        Assistant.instance.bomb = new Bomb(batteries, holders, serial, day, getEmptyPlates(), plateArray, indicators);
+        Assistant.Instance.Bomb = new Bomb(batteries, holders, serial, getEmptyPlates(), plateArray, indicators);
         Program.switchForm(Utils.getMainForm());
     }
 

@@ -226,9 +226,6 @@ partial class frmSimon
         this.Controls.SetChildIndex(this.lblRound3, 0);
         this.Controls.SetChildIndex(this.lblRound4, 0);
         this.Controls.SetChildIndex(this.lblRound5, 0);
-        this.Controls.SetChildIndex(this.btnSolve, 0);
-        this.Controls.SetChildIndex(this.btnStrike, 0);
-        this.Controls.SetChildIndex(this.btnBack, 0);
         this.ResumeLayout(false);
         this.PerformLayout();
     }

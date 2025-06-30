@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmButton : ModuleForm
+public partial class frmButton : Form
 {
     public Button button;
 

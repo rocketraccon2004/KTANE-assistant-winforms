@@ -1,0 +1,38 @@
+3D Maze
+Adjacent Letters
+Adventure Game
+Alphabet
+Anagrams
+Astrology
+Battleship
+Binary LEDs
+Bitmaps
+Bitwise Operations
+Blind Alley
+Boolean Venn Diagrams
+Broken Buttons
+Button
+Caesar Cipher
+Cheap Checkout
+Chess
+Chord Qualities
+Colour Flash
+Colour Math
+Coloured Squares
+Combination Locks
+Complicated Buttons
+Complicated Wires
+Connection Check
+Coordinates
+Crazy Talk
+Creation
+Cryptography
+Double-Oh
+Emoji Math
+English Tests
+Fast Maths
+FizzBuzz
+Follow the Leader
+Foreign Exchange Rates
+Forget me not
+Friendship

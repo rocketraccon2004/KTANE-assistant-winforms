@@ -33,19 +33,6 @@
 			txtSlot3 = new TextBox();
 			SuspendLayout();
 			// 
-			// btnBack
-			// 
-			btnBack.Location = new Point(15, 299);
-			// 
-			// btnStrike
-			// 
-			btnStrike.Location = new Point(271, 299);
-			// 
-			// btnSolve
-			// 
-			btnSolve.Location = new Point(526, 299);
-			btnSolve.Click += btnSolve_Click;
-			// 
 			// txtSlot1
 			// 
 			txtSlot1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -85,9 +72,6 @@
 			Controls.Add(txtSlot1);
 			Name = "frmSkewedSlots";
 			Text = "Skewed Slots";
-			Controls.SetChildIndex(btnSolve, 0);
-			Controls.SetChildIndex(btnStrike, 0);
-			Controls.SetChildIndex(btnBack, 0);
 			Controls.SetChildIndex(txtSlot1, 0);
 			Controls.SetChildIndex(txtSlot2, 0);
 			Controls.SetChildIndex(txtSlot3, 0);

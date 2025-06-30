@@ -2,12 +2,11 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmBlindAlley : ModuleForm
+public partial class frmBlindAlley : Form
 {
     public frmBlindAlley()
     {
         InitializeComponent();
-        btnSolve.Visible = false;
     }
 
     private void frmBlindAlley_Load(object sender, EventArgs e)

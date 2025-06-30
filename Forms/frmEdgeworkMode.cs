@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
+#pragma warning disable CS8601 // Possible null reference assignment.
 
 namespace KTANE_Assistant.Forms;
 
 #pragma warning disable CS8604 // Possible null reference argument.
-public partial class frmEdgeworkMode : ModuleForm
+public partial class frmEdgeworkMode : Form
 {
     public frmEdgeworkMode()
     {
@@ -22,18 +23,19 @@ public partial class frmEdgeworkMode : ModuleForm
         var sr = new StreamReader("Edgework.json");
         var json = string.Empty;
         for (var line = 1; line <= File.ReadAllLines("Edgework.json").Length; line++) json += sr.ReadLine();
-        Assistant.instance.bomb = JsonConvert.DeserializeObject<Bomb>(json);
+        Assistant.Instance.Bomb = JsonConvert.DeserializeObject<Bomb>(json);
         sr.Close();
         Program.switchForm(Utils.getMainForm());
     }
 
     private void manualButton_Click(object sender, EventArgs e)
     {
-        Program.switchForm(Utils.SelectModuleForm("Edgework Input"));
+        Program.switchForm(ModuleSelector.SelectForm("Edgework Input"));
     }
 
     private void frmEdgeworkSelection_Load(object sender, EventArgs e)
     {
-        Assistant.init();
+        Assistant.Init();
     }
 }
+#pragma warning restore CS8601 // Possible null reference assignment.

@@ -36,21 +36,6 @@ partial class frmWhosOnFirst
         this.txtSolution = new System.Windows.Forms.TextBox();
         this.SuspendLayout();
         // 
-        // btnBack
-        // 
-        this.btnBack.Location = new System.Drawing.Point(12, 593);
-        this.btnBack.Margin = new System.Windows.Forms.Padding(4);
-        // 
-        // btnStrike
-        // 
-        this.btnStrike.Location = new System.Drawing.Point(250, 593);
-        this.btnStrike.Margin = new System.Windows.Forms.Padding(4);
-        // 
-        // btnSolve
-        // 
-        this.btnSolve.Location = new System.Drawing.Point(156, 289);
-        this.btnSolve.Margin = new System.Windows.Forms.Padding(4);
-        // 
         // btnSubmit1
         // 
         this.btnSubmit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,9 +122,6 @@ partial class frmWhosOnFirst
         this.Controls.SetChildIndex(this.txtWord1, 0);
         this.Controls.SetChildIndex(this.txtWord2, 0);
         this.Controls.SetChildIndex(this.txtSolution, 0);
-        this.Controls.SetChildIndex(this.btnSolve, 0);
-        this.Controls.SetChildIndex(this.btnStrike, 0);
-        this.Controls.SetChildIndex(this.btnBack, 0);
         this.ResumeLayout(false);
         this.PerformLayout();
     }

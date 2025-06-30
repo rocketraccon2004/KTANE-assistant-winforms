@@ -37,10 +37,6 @@ partial class frmButton
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnSolve
-            // 
-            this.btnSolve.Click += new System.EventHandler(this.solve);
-            // 
             // dropDownColour
             // 
             this.dropDownColour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,9 +100,6 @@ partial class frmButton
             this.Controls.SetChildIndex(this.dropDownText, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.ResumeLayout(false);
 
     }

@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmAdjacentLetters : ModuleForm
+public partial class frmAdjacentLetters : Form
 {
     private AdjacentLetters module;
 
@@ -30,5 +30,30 @@ public partial class frmAdjacentLetters : ModuleForm
             txt34
         };
         module.Solve();
+    }
+
+    private void TextBox_TextChanged(object sender, EventArgs e)
+    {
+        TextBox tb = (TextBox)sender;
+        var tabIndex = tb.TabIndex;
+        var controls = tableLayoutPanel1.Controls.Cast<Control>().Where(r => r.TabIndex > tabIndex);
+        if (controls.Any())
+        {
+            controls.OrderBy(r => r.TabIndex).First().Select();
+        }
+    }
+
+    private void btnReset_Click(object sender, EventArgs e)
+    {
+        foreach (Control c in tableLayoutPanel1.Controls)
+        {
+            c.Text = string.Empty;
+        }
+        txt11.Select();
+    }
+
+    private void frmAdjacentLetters_Load(object sender, EventArgs e)
+    {
+        txt11.Select();
     }
 }

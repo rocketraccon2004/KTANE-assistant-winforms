@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmLEDEncryption : ModuleForm
+public partial class frmLEDEncryption : Form
 {
     public frmLEDEncryption()
     {
@@ -13,10 +13,10 @@ public partial class frmLEDEncryption : ModuleForm
     {
         var module = new LEDEncryption();
         var multiplier = 0;
-        var one = textBox1.Text[0];
-        var two = textBox2.Text[0];
-        var three = textBox3.Text[0];
-        var four = textBox4.Text[0];
+        var one = textBox1.Text.ToUpper()[0];
+        var two = textBox2.Text.ToUpper()[0];
+        var three = textBox3.Text.ToUpper()[0];
+        var four = textBox4.Text.ToUpper()[0];
 
         if (rbRed.Checked) multiplier = 2;
         else if (rbGreen.Checked) multiplier = 3;
@@ -41,13 +41,13 @@ public partial class frmLEDEncryption : ModuleForm
             textBox2.BackColor = Color.Green;
         else if (values[2] == origValues[1])
             textBox3.BackColor = Color.Green;
-        else if (values[3] == origValues[1])
+        else if (values[3] == origValues[0])
             textBox4.BackColor = Color.Green;
         else
             Utils.throwError("Something went wrong");
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void btnReset_Click(object sender, EventArgs e)
     {
         textBox1.Text = string.Empty;
         textBox2.Text = string.Empty;
@@ -58,5 +58,16 @@ public partial class frmLEDEncryption : ModuleForm
         textBox2.BackColor = Color.White;
         textBox3.BackColor = Color.White;
         textBox4.BackColor = Color.White;
+    }
+
+    private void TextBox_TextChanged(object sender, EventArgs e)
+    {
+        TextBox tb = (TextBox)sender;
+        var tabIndex = tb.TabIndex;
+        var controls = tableLayoutPanel1.Controls.Cast<Control>().Where(r => r.TabIndex > tabIndex);
+        if (controls.Any())
+        {
+            controls.OrderBy(r => r.TabIndex).First().Select();
+        }
     }
 }

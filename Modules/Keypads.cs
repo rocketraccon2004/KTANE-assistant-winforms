@@ -68,8 +68,7 @@ public class Keypads : Module
                  solution6.Contains(image4Name))
             MessageBox.Show(solve(6));
         else
-            MessageBox.Show("Can't find solution", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        Program.switchForm(Utils.getMainForm());
+            Utils.throwError("Can't find solution");
     }
 
     private string solve(int solutionNo)

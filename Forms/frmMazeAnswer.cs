@@ -3,19 +3,18 @@ using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmMazeAnswer : ModuleForm
+public partial class frmMazeAnswer : Form
 {
     private List<Maze.Coordinate> correctSpots;
-    private Image downArrowImage = Image.FromFile("Maze Arrows/down arrow.png");
+    private Image downArrowImage = Image.FromFile("Resources/Maze/down arrow.png");
 
-    private Image leftArrowImage = Image.FromFile("Maze Arrows/left arrow.png");
-    private Image rightArrowImage = Image.FromFile("Maze Arrows/right arrow.png");
-    private Image upArrowImage = Image.FromFile("Maze Arrows/up arrow.png");
+    private Image leftArrowImage = Image.FromFile("Resources/Maze/left arrow.png");
+    private Image rightArrowImage = Image.FromFile("Resources/Maze/right arrow.png");
+    private Image upArrowImage = Image.FromFile("Resources/Maze/up arrow.png");
 
     public frmMazeAnswer(List<Maze.Coordinate> correctSpots)
     {
         InitializeComponent();
-        disableButtons();
 
         this.correctSpots = correctSpots;
 

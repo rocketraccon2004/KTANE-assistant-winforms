@@ -1,11 +1,10 @@
 ﻿namespace KTANE_Assistant.Forms;
 
-public partial class frmSimon : ModuleForm
+public partial class frmSimon : Form
 {
     public frmSimon()
     {
         InitializeComponent();
-        btnSolve.Visible = false;
     }
 
     private void solveRound1(object sender, EventArgs e)
@@ -35,13 +34,13 @@ public partial class frmSimon : ModuleForm
 
     private string solve(string colour)
     {
-        if (Assistant.instance.bomb.hasVowelInSerial()) return withVowel(colour);
+        if (Assistant.Instance.Bomb.hasVowelInSerial()) return withVowel(colour);
         return withoutVowel(colour);
     }
 
     private string withoutVowel(string colour)
     {
-        switch (Assistant.instance.strikes)
+        switch (Assistant.Instance.Strikes)
         {
             case 0:
                 return noVowelZero(colour);
@@ -54,7 +53,7 @@ public partial class frmSimon : ModuleForm
 
     private string withVowel(string colour)
     {
-        switch (Assistant.instance.strikes)
+        switch (Assistant.Instance.Strikes)
         {
             case 0:
                 return vowelZero(colour);

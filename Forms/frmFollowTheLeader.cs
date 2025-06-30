@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmFollowTheLeader : ModuleForm
+public partial class frmFollowTheLeader : Form
 {
     public frmFollowTheLeader()
     {

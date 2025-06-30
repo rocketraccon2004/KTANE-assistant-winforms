@@ -16,7 +16,7 @@ internal static class Program
     public static void switchForm(Form _new)
     {
         var old = Form.ActiveForm;
-        if (old != null)
+        if (old != null && _new != null)
         {
             _new.StartPosition = FormStartPosition.Manual;
             _new.Location = old.Location;
@@ -25,7 +25,7 @@ internal static class Program
         }
         else
         {
-            MessageBox.Show("Form.ActiveForm is null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Utils.throwError("One of the forms is null");
         }
     }
 }

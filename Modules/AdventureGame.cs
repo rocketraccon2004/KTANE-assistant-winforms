@@ -132,20 +132,20 @@ public class AdventureGame : Module
 
         if (Broadsword) weapons.Add(Weapon.Broadsword);
         if (Caber) weapons.Add(Weapon.Caber);
-        if (NastyKnife) weapons.Add(Weapon.NastyKnife);
+        if (NastyKnife) weapons.Add(Weapon.Nasty_Knife);
         if (Longbow) weapons.Add(Weapon.Longbow);
-        if (MagicOrb) weapons.Add(Weapon.MagicOrb);
+        if (MagicOrb) weapons.Add(Weapon.Magic_Orb);
         if (Grimoire) weapons.Add(Weapon.Grimoire);
 
         if (Balloon) items.Add(Item.Balloon);
         if (Battery) items.Add(Item.Battery);
         if (Bellows) items.Add(Item.Bellows);
-        if (CrystalBall) items.Add(Item.CrystalBall);
+        if (CrystalBall) items.Add(Item.Crystal_Ball);
         if (Feather) items.Add(Item.Feather);
-        if (HardDrive) items.Add(Item.HardDrive);
+        if (HardDrive) items.Add(Item.Hard_Drive);
         if (Lamp) items.Add(Item.Lamp);
         if (Moonstone) items.Add(Item.Moonstone);
-        if (SmallDog) items.Add(Item.SmallDog);
+        if (SmallDog) items.Add(Item.Small_Dog);
         if (Stepladder) items.Add(Item.Stepladder);
         if (Sunstone) items.Add(Item.Sunstone);
         if (Ticket) items.Add(Item.Ticket);
@@ -166,13 +166,22 @@ public class AdventureGame : Module
         var value = weaponValues.Max();
 
         foreach (var w in weaponsWithValues.Keys)
+        {
             if (weaponsWithValues[w] == value)
             {
                 weaponToUse = w;
                 break;
             }
+        }
+        
+        List<string> strToUse = new();
+        
+        foreach (Item i in toUse)
+        {
+            strToUse.Add(i.ToString().Replace('_', ' '));
+        }
 
-        MessageBox.Show($"Use {string.Join(", ", toUse.Distinct())} then {weaponToUse.ToString()}");
+        MessageBox.Show($"Use {string.Join(", ", strToUse.Distinct())} then {weaponToUse.ToString().Replace('_', ' ')}");
     }
 
     private int getWeaponValue(Weapon weapon)
@@ -187,9 +196,9 @@ public class AdventureGame : Module
                 return INT + 2 - toFight.INT;
             case Weapon.Longbow:
                 return DEX + 2 - toFight.DEX;
-            case Weapon.NastyKnife:
+            case Weapon.Nasty_Knife:
                 return DEX - toFight.DEX;
-            case Weapon.MagicOrb:
+            case Weapon.Magic_Orb:
                 return INT - toFight.INT;
             default:
                 throw new Exception($"Unknown Weapon {weapon.ToString()}");
@@ -246,16 +255,16 @@ public class AdventureGame : Module
             case Item.Balloon:
                 return (gravity < 9.3f || pressure > 110) && toFight != Eagle;
             case Item.Battery:
-                return Assistant.instance.bomb.batteries <= 1 && toFight != Wizard && toFight != Golem;
+                return Assistant.Instance.Bomb.batteries <= 1 && toFight != Wizard && toFight != Golem;
             case Item.Bellows:
                 if (toFight == Dragon || toFight == Eagle) return pressure > 105;
 
                 return pressure < 95;
-            case Item.CrystalBall:
+            case Item.Crystal_Ball:
                 return INT > bomb.getLastDigitOfSerial() && toFight != Wizard;
             case Item.Feather:
                 return DEX > STR || DEX > INT;
-            case Item.HardDrive:
+            case Item.Hard_Drive:
                 return bomb.hasDuplicatePorts();
             case Item.Lamp:
                 return temperature < 12 && toFight != Lizard;
@@ -263,7 +272,7 @@ public class AdventureGame : Module
                 return bomb.countUnlitIndicators() >= 2;
             case Item.Symbol:
                 return toFight == Demon || toFight == Golem || temperature > 31;
-            case Item.SmallDog:
+            case Item.Small_Dog:
                 return toFight != Demon && toFight != Dragon && toFight != Troll;
             case Item.Stepladder:
                 return heightFeet < 4 && toFight != Goblin && toFight != Lizard;
@@ -289,9 +298,9 @@ public class AdventureGame : Module
     {
         Broadsword,
         Caber,
-        NastyKnife,
+        Nasty_Knife,
         Longbow,
-        MagicOrb,
+        Magic_Orb,
         Grimoire
     }
 
@@ -300,12 +309,12 @@ public class AdventureGame : Module
         Balloon,
         Battery,
         Bellows,
-        CrystalBall,
+        Crystal_Ball,
         Feather,
-        HardDrive,
+        Hard_Drive,
         Lamp,
         Moonstone,
-        SmallDog,
+        Small_Dog,
         Stepladder,
         Sunstone,
         Symbol,

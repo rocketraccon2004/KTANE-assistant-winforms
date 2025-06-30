@@ -1,13 +1,16 @@
-﻿namespace KTANE_Assistant.Modules;
+﻿using KTANE_Assistant.Forms;
+
+namespace KTANE_Assistant.Modules;
 
 public class Memory : Module
 {
+    public int round = 1;
+
     private string display;
     private string n1;
     private string n2;
     private string n3;
     private string n4;
-    private int round;
     private string round1Answer;
     private int round1Position;
     private string round2Answer;
@@ -15,15 +18,16 @@ public class Memory : Module
     private string round3Answer;
     private string round4Answer;
     private List<TextBox> tbs;
+    private frmMemory form;
 
-    public Memory(List<TextBox> tbs)
+    public Memory(List<TextBox> tbs, frmMemory form)
     {
         this.tbs = tbs;
+        this.form = form;
     }
 
-    public void setRound(int round, string display, string n1, string n2, string n3, string n4)
+    public void setTextForRound(string display, string n1, string n2, string n3, string n4)
     {
-        this.round = round;
         this.display = display;
         this.n1 = n1;
         this.n2 = n2;
@@ -34,13 +38,11 @@ public class Memory : Module
     public void Solve()
     {
         MessageBox.Show($"Click {Solve(round)}");
-        if (round == 5)
-        {
-            Program.switchForm(Utils.getMainForm());
-            return;
-        }
-
         round++;
+        if (round == 6)
+        {
+            form.resetModule();
+        }
     }
 
     private string Solve(int round)

@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmKnob : ModuleForm
+public partial class frmKnob : Form
 {
     public frmKnob()
     {

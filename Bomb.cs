@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-#pragma warning disable CS8601 // Possible null reference assignment.
+﻿#pragma warning disable CS8601 // Possible null reference assignment.
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 #nullable enable
 
@@ -9,20 +7,18 @@ namespace KTANE_Assistant;
 public class Bomb
 {
     public int batteries;
-    public Day day;
     public int emptyPlates;
     public int holders;
     public List<Indicator> indicators;
     public Plate[] plates;
     public string serial;
 
-    public Bomb(int batteries, int holders, string serial, Day day, int emptyPlates, Plate[]? plates,
+    public Bomb(int batteries, int holders, string serial, int emptyPlates, Plate[]? plates,
         List<Indicator> indicators)
     {
         this.batteries = batteries;
         this.holders = holders;
         this.serial = serial.ToUpper();
-        this.day = day;
         this.emptyPlates = emptyPlates;
         this.plates = plates;
         this.indicators = indicators;
@@ -91,12 +87,12 @@ public class Bomb
 
     public int getLastDigitOfSerial()
     {
-        return (int)char.GetNumericValue(Assistant.instance.bomb.serial[5]);
+        return (int)char.GetNumericValue(Assistant.Instance.Bomb.serial[5]);
     }
 
     public int getFirstDigitOfSerial()
     {
-        foreach (var c in Assistant.instance.bomb.serial)
+        foreach (var c in Assistant.Instance.Bomb.serial)
             if (char.IsDigit(c))
                 return (int)char.GetNumericValue(c);
         throw new Exception("No digit in serial");
@@ -104,9 +100,9 @@ public class Bomb
 
     public bool hasVowelInSerial()
     {
-        return Assistant.instance.bomb.serial.Contains('A') | Assistant.instance.bomb.serial.Contains('E') |
-               Assistant.instance.bomb.serial.Contains('I') | Assistant.instance.bomb.serial.Contains('O') |
-               Assistant.instance.bomb.serial.Contains('U');
+        return Assistant.Instance.Bomb.serial.Contains('A') | Assistant.Instance.Bomb.serial.Contains('E') |
+               Assistant.Instance.Bomb.serial.Contains('I') | Assistant.Instance.Bomb.serial.Contains('O') |
+               Assistant.Instance.Bomb.serial.Contains('U');
     }
 
     public bool hasIndicator(IndicatorType type, bool lit)
@@ -127,7 +123,7 @@ public class Bomb
         var Serial = 0;
         var RCA = 0;
 
-        foreach (var plate in Assistant.instance.bomb.plates)
+        foreach (var plate in Assistant.Instance.Bomb.plates)
         {
             if (plate.dvid) DVID++;
 
@@ -149,7 +145,7 @@ public class Bomb
     {
         var toReturn = 0;
 
-        foreach (var i in Assistant.instance.bomb.indicators)
+        foreach (var i in Assistant.Instance.Bomb.indicators)
             if (i.lit && i.visible)
                 toReturn++;
 
@@ -160,7 +156,7 @@ public class Bomb
     {
         var toReturn = 0;
 
-        foreach (var i in Assistant.instance.bomb.indicators)
+        foreach (var i in Assistant.Instance.Bomb.indicators)
             if (!i.lit && i.visible)
                 toReturn++;
 

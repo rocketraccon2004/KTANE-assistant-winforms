@@ -1,13 +1,12 @@
 ﻿namespace KTANE_Assistant.Forms;
 
-public partial class frmWhosOnFirst : ModuleForm
+public partial class frmWhosOnFirst : Form
 {
     private Dictionary<string, string> solutions = new();
 
     public frmWhosOnFirst()
     {
         InitializeComponent();
-        btnSolve.Visible = false;
     }
 
     private void btnSubmit1_Click(object sender, EventArgs e)
@@ -82,7 +81,7 @@ public partial class frmWhosOnFirst : ModuleForm
 
     private void frmWhosOnFirst_Load(object sender, EventArgs e)
     {
-        var solutionsArray = File.ReadAllLines("Files/Who's on first.txt");
+        var solutionsArray = File.ReadAllLines("Resources/Who's on first/Who's on first.txt");
         foreach (var s in solutionsArray)
         {
             var solution = s.Split(':');

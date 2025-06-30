@@ -42,19 +42,6 @@
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(50, 154);
-            // 
-            // btnStrike
-            // 
-            this.btnStrike.Location = new System.Drawing.Point(281, 154);
-            // 
-            // btnSolve
-            // 
-            this.btnSolve.Location = new System.Drawing.Point(520, 154);
-            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -195,9 +182,6 @@
             this.Controls.SetChildIndex(this.checkBox10, 0);
             this.Controls.SetChildIndex(this.checkBox11, 0);
             this.Controls.SetChildIndex(this.checkBox12, 0);
-            this.Controls.SetChildIndex(this.btnSolve, 0);
-            this.Controls.SetChildIndex(this.btnStrike, 0);
-            this.Controls.SetChildIndex(this.btnBack, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

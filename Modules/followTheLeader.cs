@@ -2,23 +2,17 @@
 
 namespace KTANE_Assistant.Modules;
 
-public class followTheLeader : Module
+public class followTheLeader(string colours, string numbers) : Module
 {
-    private string colours;
+    private string colours = colours.ToLower();
 
     private List<string> coloursList = new();
     private char currentInstruction;
-    private string numbers;
+    private string numbers = numbers.ToLower();
     private List<int> numbersList = new();
     private bool reverse;
     private int start;
     private List<int> toCut;
-
-    public followTheLeader(string colours, string numbers)
-    {
-        this.colours = colours.ToLower();
-        this.numbers = numbers.ToLower();
-    }
 
     public void Solve()
     {

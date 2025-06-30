@@ -1,36 +1,17 @@
-﻿using System.Linq;
+﻿namespace KTANE_Assistant.Forms;
 
-namespace KTANE_Assistant.Forms;
-
-// ReSharper disable once EmptyGeneralCatchClause
-public partial class frmAnagrams : ModuleForm
+public partial class frmAnagrams : Form
 {
-    private Dictionary<string, string> data = new()
+    private static readonly List<List<string>> Words = new()
     {
-        { "ADEKPY", "KEYPAD" },
-        { "ADIMRS", "DISARM" },
-        { "AEFLMS", "FLAMES" },
-        { "AEHRSS", "RASHES" },
-        { "AEKLRV", "KEVLAR" },
-        { "AEMRST", "MASTER" },
-        { "AENOPW", "WEAPON" },
-        { "AEPPRS", "SAPPER" },
-        { "AMORRT", "MORTAR" },
-        { "BNOTTU", "BUTTON" },
-        { "BOORST", "ROBOTS" },
-        { "BRSSTU", "BURSTS" },
-        { "CDEEIV", "DEVICE" },
-        { "CEERSU", "RECUSE" },
-        { "CEKORT", "ROCKET" },
-        { "DEEFSU", "DEFUSE" },
-        { "DEGITW", "WIDGET" },
-        { "DELMOU", "MODULE" },
-        { "DELOOP", "LOOPED" },
-        { "DERSTU", "DUSTER" },
-        { "EELRTT", "LETTER" },
-        { "EEMSTX", "SEMTEX" },
-        { "ENOPRS", "PERSON" },
-        { "GIINRW", "WIRING" }
+        new List<string> {"stream", "master", "tamers"},
+        new List<string> {"looped", "poodle", "pooled"},
+        new List<string> {"cellar", "caller", "recall"},
+        new List<string> {"seated", "sedate", "teased"},
+        new List<string> {"rescue", "secure", "recuse"},
+        new List<string> {"rashes", "shears", "shares"},
+        new List<string> {"barely", "barley", "bleary"},
+        new List<string> {"duster", "rusted", "rudest"}
     };
 
     public frmAnagrams()
@@ -40,23 +21,21 @@ public partial class frmAnagrams : ModuleForm
 
     private void btnSolve_Click(object sender, EventArgs e)
     {
-        var permutations = GetPermutations(txtAnagram.Text, 6);
-
-        foreach (var s in permutations)
-            try
+        string anagram = txtAnagram.Text.ToLower();
+        foreach (var words in Words)
+        {
+            if (words.Contains(anagram))
             {
-                MessageBox.Show(data[s]);
-            }
-            catch
-            {
-            }
-    }
+                int index = words.IndexOf(anagram);
+                int rand = Utils.RNG(0, words.Count);
+                while (rand == index)
+                {
+                    rand = Utils.RNG(0, words.Count);
+                }
 
-    private IEnumerable<string> GetPermutations(string letters, int length)
-    {
-        if (length == 1) return letters.Select(c => c.ToString());
-        return GetPermutations(letters, length - 1)
-            .SelectMany(t => letters.Where(e => !t.Contains(e)),
-                (t1, t2) => t1 + t2);
+                MessageBox.Show(words[rand]);
+                return;
+            }
+        }
     }
 }

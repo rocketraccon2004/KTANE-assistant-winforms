@@ -15,13 +15,13 @@ public class Button : Module
     {
         if ((Colour == "Blue") & (Label == "Abort"))
             holdButton();
-        else if ((Assistant.instance.bomb.batteries > 1) & (Label == "Detonate"))
+        else if ((Assistant.Instance.Bomb.batteries > 1) & (Label == "Detonate"))
             pressAndReleaseButton();
         else if ((Colour == "White") & bomb.hasIndicator(IndicatorType.CAR, true))
             holdButton();
         else if (Colour == "Yellow")
             holdButton();
-        else if (Assistant.instance.bomb.batteries > 2 &&
+        else if (Assistant.Instance.Bomb.batteries > 2 &&
                  bomb.hasIndicator(IndicatorType.FRK, true))
             pressAndReleaseButton();
         else if ((Colour == "Red") & (Label == "Hold"))

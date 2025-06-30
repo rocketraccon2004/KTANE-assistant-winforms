@@ -35,19 +35,6 @@
 			lblGuide = new Label();
 			SuspendLayout();
 			// 
-			// btnBack
-			// 
-			btnBack.Location = new Point(43, 305);
-			// 
-			// btnStrike
-			// 
-			btnStrike.Location = new Point(278, 305);
-			// 
-			// btnSolve
-			// 
-			btnSolve.Location = new Point(513, 305);
-			btnSolve.Click += btnSolve_Click;
-			// 
 			// txtColours
 			// 
 			txtColours.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -108,9 +95,6 @@
 			Text = "Follow The Leader";
 			Load += frmFollowTheLeader_Load;
 			Controls.SetChildIndex(txtColours, 0);
-			Controls.SetChildIndex(btnSolve, 0);
-			Controls.SetChildIndex(btnStrike, 0);
-			Controls.SetChildIndex(btnBack, 0);
 			Controls.SetChildIndex(txtNumbers, 0);
 			Controls.SetChildIndex(label1, 0);
 			Controls.SetChildIndex(label2, 0);

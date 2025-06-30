@@ -3,7 +3,7 @@ using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmAdventureGame : ModuleForm
+public partial class frmAdventureGame : Form
 {
     private AdventureGame module = new();
 
@@ -35,7 +35,7 @@ public partial class frmAdventureGame : ModuleForm
         module.Solve();
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void btnReset_Click(object sender, EventArgs e)
     {
         txtSTR.Text = string.Empty;
         txtPressure.Text = string.Empty;

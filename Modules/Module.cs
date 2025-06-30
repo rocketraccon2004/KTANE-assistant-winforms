@@ -2,7 +2,7 @@
 
 public abstract class Module
 {
-    public Bomb bomb => Assistant.instance.bomb;
+    public Bomb bomb => Assistant.Instance.Bomb;
 
     public bool isOdd(int num)
     {
