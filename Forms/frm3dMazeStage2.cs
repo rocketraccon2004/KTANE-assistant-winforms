@@ -66,8 +66,8 @@ public partial class frm3dMazeStage2 : Form
         Hide();
     }
 
-    private void moduleSelectionButton_Click(object sender, EventArgs e)
+    private void btnStrike_Click(object sender, EventArgs e)
     {
-        Program.switchForm(Utils.getMainForm());
+        Assistant.Instance.strikeButtonClicked(ModifierKeys.HasFlag(Keys.Shift));
     }
 }

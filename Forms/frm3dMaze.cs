@@ -297,11 +297,16 @@ public partial class frm3dMaze : Form
 
     private void btnStrike_Click(object sender, EventArgs e)
     {
-        Assistant.Instance.strikeButton(ModifierKeys.HasFlag(Keys.Shift));
+        Assistant.Instance.strikeButtonClicked(ModifierKeys.HasFlag(Keys.Shift));
     }
 
     private void btnBack_Click(object sender, EventArgs e)
     {
-        Assistant.Instance.backButton();
+        Assistant.Instance.backButtonClicked();
+    }
+
+    private void frm3dMaze_FormClosing(object sender, FormClosingEventArgs e)
+    {
+        Assistant.Instance.formClosed(e);
     }
 }

@@ -27,77 +27,87 @@
     /// </summary>
     private void InitializeComponent()
     {
-        submitButton = new Button();
-        moduleSelectionButton = new Button();
-        cardinalComboBox = new ComboBox();
-        label2 = new Label();
+        submitButton = new System.Windows.Forms.Button();
+        cardinalComboBox = new System.Windows.Forms.ComboBox();
+        label2 = new System.Windows.Forms.Label();
+        btnBack = new System.Windows.Forms.Button();
+        btnStrike = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // submitButton
         // 
-        submitButton.Location = new Point(326, 131);
-        submitButton.Margin = new Padding(4, 4, 4, 4);
+        submitButton.Location = new System.Drawing.Point(326, 131);
+        submitButton.Margin = new System.Windows.Forms.Padding(4);
         submitButton.Name = "submitButton";
-        submitButton.Size = new Size(97, 45);
+        submitButton.Size = new System.Drawing.Size(97, 45);
         submitButton.TabIndex = 12;
         submitButton.Text = "Submit";
         submitButton.UseVisualStyleBackColor = true;
         submitButton.Click += submitButton_Click;
         // 
-        // moduleSelectionButton
-        // 
-        moduleSelectionButton.Location = new Point(14, 133);
-        moduleSelectionButton.Margin = new Padding(4, 4, 4, 4);
-        moduleSelectionButton.Name = "moduleSelectionButton";
-        moduleSelectionButton.Size = new Size(97, 45);
-        moduleSelectionButton.TabIndex = 9;
-        moduleSelectionButton.Text = "Module Selection";
-        moduleSelectionButton.UseVisualStyleBackColor = true;
-        moduleSelectionButton.Click += moduleSelectionButton_Click;
-        // 
         // cardinalComboBox
         // 
         cardinalComboBox.FormattingEnabled = true;
-        cardinalComboBox.Location = new Point(150, 83);
-        cardinalComboBox.Margin = new Padding(4, 4, 4, 4);
+        cardinalComboBox.Location = new System.Drawing.Point(150, 83);
+        cardinalComboBox.Margin = new System.Windows.Forms.Padding(4);
         cardinalComboBox.Name = "cardinalComboBox";
-        cardinalComboBox.Size = new Size(140, 23);
+        cardinalComboBox.Size = new System.Drawing.Size(140, 28);
         cardinalComboBox.TabIndex = 8;
         // 
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(158, 43);
-        label2.Margin = new Padding(4, 0, 4, 0);
+        label2.Location = new System.Drawing.Point(158, 43);
+        label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
         label2.Name = "label2";
-        label2.Size = new Size(111, 15);
+        label2.Size = new System.Drawing.Size(140, 20);
         label2.TabIndex = 7;
         label2.Text = "What is the cardinal";
         // 
+        // btnBack
+        // 
+        btnBack.Location = new System.Drawing.Point(24, 131);
+        btnBack.Margin = new System.Windows.Forms.Padding(4);
+        btnBack.Name = "btnBack";
+        btnBack.Size = new System.Drawing.Size(97, 45);
+        btnBack.TabIndex = 13;
+        btnBack.Text = "Back";
+        btnBack.UseVisualStyleBackColor = true;
+        btnBack.Click += btnBack_Click;
+        // 
+        // btnStrike
+        // 
+        btnStrike.Location = new System.Drawing.Point(173, 131);
+        btnStrike.Margin = new System.Windows.Forms.Padding(4);
+        btnStrike.Name = "btnStrike";
+        btnStrike.Size = new System.Drawing.Size(97, 45);
+        btnStrike.TabIndex = 14;
+        btnStrike.Text = "Strike";
+        btnStrike.UseVisualStyleBackColor = true;
+        btnStrike.Click += btnStrike_Click;
+        // 
         // frm3dMazeStage2
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
-        AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(445, 197);
+        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        ClientSize = new System.Drawing.Size(445, 197);
+        Controls.Add(btnStrike);
+        Controls.Add(btnBack);
         Controls.Add(submitButton);
-        Controls.Add(moduleSelectionButton);
         Controls.Add(cardinalComboBox);
         Controls.Add(label2);
-        Margin = new Padding(3, 3, 3, 3);
-        Name = "frm3dMazeStage2";
         Text = "KTANE Assistant";
-        Controls.SetChildIndex(label2, 0);
-        Controls.SetChildIndex(cardinalComboBox, 0);
-        Controls.SetChildIndex(moduleSelectionButton, 0);
-        Controls.SetChildIndex(submitButton, 0);
         ResumeLayout(false);
         PerformLayout();
     }
 
+    private System.Windows.Forms.Button btnStrike;
+
+    private System.Windows.Forms.Button btnBack;
+
     #endregion
 
     private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.Button moduleSelectionButton;
-        private ComboBox cardinalComboBox;
+    private ComboBox cardinalComboBox;
         private Label label2;
 }

@@ -13,7 +13,7 @@ public class Assistant
         Instance = new Assistant();
     }
 
-    public void strikeButton(bool shift)
+    public void strikeButtonClicked(bool shift)
     {
         if (shift)
         {
@@ -25,8 +25,20 @@ public class Assistant
         Utils.showMessageBox("Added a strike");
     }
 
-    public void backButton()
+    public void backButtonClicked()
     {
         Program.switchForm(Utils.getMainForm());        
+    }
+
+    public void formClosed(FormClosingEventArgs args)
+    {
+        if (Utils.showYesNoOptionBox("Are you sure you want to quit?") == DialogResult.No)
+        {
+            args.Cancel = true;
+        }
+        else
+        {
+            Application.Exit();
+        }
     }
 }

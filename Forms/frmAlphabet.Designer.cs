@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlphabet));
-            tableLayoutPanel1 = new TableLayoutPanel();
-            txtLetter4 = new TextBox();
-            txtLetter3 = new TextBox();
-            txtLetter2 = new TextBox();
-            txtLetter1 = new TextBox();
-            btnReset = new Button();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            txtLetter4 = new System.Windows.Forms.TextBox();
+            txtLetter3 = new System.Windows.Forms.TextBox();
+            txtLetter2 = new System.Windows.Forms.TextBox();
+            txtLetter1 = new System.Windows.Forms.TextBox();
+            btnReset = new System.Windows.Forms.Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
             tableLayoutPanel1.Controls.Add(txtLetter4, 1, 1);
             tableLayoutPanel1.Controls.Add(txtLetter3, 0, 1);
             tableLayoutPanel1.Controls.Add(txtLetter2, 1, 0);
             tableLayoutPanel1.Controls.Add(txtLetter1, 0, 0);
+            resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // txtLetter4
@@ -81,13 +81,10 @@
             // frmAlphabet
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(btnReset);
             Controls.Add(tableLayoutPanel1);
-            Name = "frmAlphabet";
             Load += frmAlphabet_Load;
-            Controls.SetChildIndex(tableLayoutPanel1, 0);
-            Controls.SetChildIndex(btnReset, 0);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -95,11 +92,11 @@
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
-		private TextBox txtLetter1;
-		private TextBox txtLetter4;
-		private TextBox txtLetter3;
-		private TextBox txtLetter2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.TextBox txtLetter1;
+		private System.Windows.Forms.TextBox txtLetter4;
+		private System.Windows.Forms.TextBox txtLetter3;
+		private System.Windows.Forms.TextBox txtLetter2;
 		private Button btnReset;
 	}
 }

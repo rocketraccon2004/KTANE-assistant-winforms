@@ -7,7 +7,7 @@ namespace KTANE_Assistant;
 
 public static class Utils
 {
-    private static frmMain main;
+    private static frmMain? main;
 
     public static Form getMainForm()
     {
@@ -23,6 +23,11 @@ public static class Utils
     public static void showMessageBox(string message)
     {
         MessageBox.Show(message, "KTANE Assistant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
+    public static DialogResult showYesNoOptionBox(string message)
+    {
+        return MessageBox.Show(message, "KTANE Assistant", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
     }
    
     public static int RNG(int min, int max)

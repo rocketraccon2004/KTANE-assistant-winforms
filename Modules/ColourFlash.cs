@@ -1,6 +1,8 @@
 ﻿#nullable enable
 namespace KTANE_Assistant.Modules;
 
+
+//Todo: Rewrite this
 public class ColourFlash(List<string> words, List<string> colours) : Module
 {
     private List<string> colours = colours;

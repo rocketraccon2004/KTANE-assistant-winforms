@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>KTANE_Assistant</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
@@ -122,12 +122,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="WAConverter">
-      <HintPath>C:\Users\Jolyon Everett\Documents\WinForms2AvaloniaConverter\bin\Debug\net6.0-windows\WAConverter.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>

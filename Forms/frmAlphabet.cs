@@ -1,9 +1,11 @@
-﻿using KTANE_Assistant.Modules;
+﻿using System.Runtime.Serialization.Formatters.Binary;
+using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
 public partial class frmAlphabet : Form
 {
+    //TODO:Fix Formatting of form
     public frmAlphabet()
     {
         InitializeComponent();

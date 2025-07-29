@@ -132,6 +132,7 @@
         Controls.Add(label1);
         Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
         Text = "3d Maze";
+        FormClosing += frm3dMaze_FormClosing;
         ResumeLayout(false);
         PerformLayout();
     }
